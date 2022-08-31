@@ -22,14 +22,14 @@ function MainHero() {
         scrollTrigger:{
             trigger:heroContainer,
             start:'0%',
-            end:'150%',
+            end:'300%',
             scrub:true,
             pin:true,
-            markers:true,
+            markers:false,
         }
     })
     
-    tlVideo.fromTo(vid1, {currentTime:0, }, {currentTime:60,  duration:10})
+    tlVideo.fromTo(vid1, {currentTime:0, }, {currentTime:60,  duration:1000})
   
   
     },[])
