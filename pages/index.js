@@ -19,6 +19,19 @@ export default function Home() {
         <MainHero/>
       </main>
 
+      <section className='flex max-w-[80vw] justify-center min-h-[90vh]'>
+        <div className='flex-1'>
+          <Image src="/img/home/Machine.png" alt="Twitter Button"  width={744} height={692}/> 
+        </div>
+        <div className='flex-1 justify-center items-center h-full'>
+          <h1 className='text-[#FF6600] text-[36px]' >Our Endeavor</h1>
+          <p className='text-white text-[24px]'>
+            DISRUPT the industry & become pioneers of large scale 3D printing in SA. Creating infinite product development through re-purposed waste. Make a contribution to saving our planet.
+          </p>
+        </div>
+
+      </section>
+
       <footer className={styles.footer}>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"

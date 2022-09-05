@@ -11,12 +11,38 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Oxanium', cursive; 
+  font-family: 'Oxanium', cursive;
+  background-color: #010101; 
 }
 
 * {
   box-sizing: border-box;
   
+}
+.card1{
+  background-color: rgba(0, 0, 0, 0.205);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgb(48, 48, 48);
+}
+
+.card2{
+  background-color: #FF6600;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgb(255, 255, 255);
+}
+
+
+
+.card3{
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    border: 1px solid rgb(255, 255, 255);
 }
 
 

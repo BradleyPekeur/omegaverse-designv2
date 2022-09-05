@@ -10,16 +10,30 @@ function services(props) {
           <h1 className='text-white text-[96px] '>Services</h1>
           <span className='text-[#FF6600] text-[36px] '>Industries we server</span>
         </div>
-        <div className='w-[50%]  flex justify-center items-center relative bg-red-800'>
+        <div className='w-[50%]  flex justify-center items-center relative'>
         <div className='w-full relative'>
+          <div className='card1'>
           <ServicesCards
               title="DFM & DFA"
-              description="Hello World"
+              description="Design for manufacturing & 3D printing"
+              textColor = "#FF6600"             
             />
-            <div className='absolute top-0 left-60 bg-blue-800 w-[600px]'>
+          </div>
+
+            <div className='card2 absolute top-0 left-[29%] w-[600px]'>
               <ServicesCards
-                title="DFM & DFA"
-                description="Hello World"
+                title="Mega CNC Milling"
+                description="Multi axis composites machining"
+                textColor = "white"
+            
+              />
+            </div>
+            <div className='card3 absolute top-0 left-[58%] w-[600px]' >
+              <ServicesCards
+                title="Mega 3D Printing"
+                description = "Large scale 3D printing"
+                textColor = "#FF6600"
+                
               />
             </div>
         </div>
