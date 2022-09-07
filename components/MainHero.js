@@ -29,7 +29,7 @@ function MainHero() {
         }
     })
     
-    tlVideo.fromTo(vid1, {currentTime:0, }, {currentTime:60,  duration:1000})
+    tlVideo.fromTo(vid1, {currentTime:0, }, {currentTime:60,  duration:5000})
   
   
     },[])
@@ -38,9 +38,9 @@ function MainHero() {
     <div className='pt-24 relative overflow-hidden min-h-[100vh] intro-hero  ' 
     ref={heroSection}
     >   
-        <video className='intro-video absolute top-0 left-0 w-full h-full object-cover z-30' src="/video/intro.mp4"  muted 
+        <video className='absolute top-0 left-0 w-full h-full object-cover z-30' src="/video/intro.mp4"  muted 
         ref={video1}
-        > </video>
+         > </video>
     </div>
   )
 }

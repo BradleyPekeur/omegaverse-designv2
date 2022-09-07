@@ -19,31 +19,29 @@ export default function Home() {
         <MainHero/>
       </main>
 
-      <section className='flex max-w-[80vw] justify-center min-h-[90vh]'>
-        <div className='flex-1'>
-          <Image src="/img/home/Machine.png" alt="Twitter Button"  width={744} height={692}/> 
+      <section className='flex w-screen justify-center min-h-[100vh] items-center bg-[#010101]'>
+        <div className='flex flex-col md:flex-row max-w-[80vw] h-full justify-center items-center'>
+          <div className='flex-1'>
+            <Image src="/img/home/Machine.png" alt="Twitter Button"  width={744} height={692}/> 
+          </div>
+          <div className='flex-1 justify-center items-center h-full'>
+            <h1 className='text-[#FF6600] mb-8 sHeading'>About Omega</h1>
+            <p className='text-white pText'>
+            We are a large scale CNC & 3D printing, composites start up. We manufacture tooling, models, prototypes and patterns for numerous sectors. We support local initiatives that drive awareness and create innovation through re-purposing waste. We are passionate about sustainability, our economy and competitiveness as a country
+            </p>
+          </div>
         </div>
-        <div className='flex-1 justify-center items-center h-full'>
-          <h1 className='text-[#FF6600] text-[36px]' >Our Endeavor</h1>
-          <p className='text-white text-[24px]'>
-            DISRUPT the industry & become pioneers of large scale 3D printing in SA. Creating infinite product development through re-purposed waste. Make a contribution to saving our planet.
-          </p>
-        </div>
-
       </section>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+
+
+      <section className='flex w-full justify-center bg-no-repeat min-h-[100vh] items-center bg-cover bg-center' style=  {{backgroundImage:"url(/img/home/automotive.png)"}}>
+        <div className='bg-red'>
+          <div>Left</div>
+          <div className='text-white'>Endless Possibilities</div>
+        </div>
+      </section>
+
     </div>
   )
 }
