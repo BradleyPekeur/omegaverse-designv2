@@ -33,7 +33,7 @@ once(document.documentElement, "touchstart", function (e) {
 /* ---------------------------------- */
 /* Scroll Control! */
 
-gsap.registerPlugin(ScrollTrigger);
+
 
 
 
@@ -88,11 +88,12 @@ setTimeout(function () {
 
 
   return (
-    <div id="smoothWrapper">
+    <><div id="smoothWrapper">
         <video id="smoothContent" src="/video/intro60fps.mp4" playsInline webkit-playsinline="true" preload="auto" muted className="video-background" ></video>
-
-<div id="container"></div>
-    </div>
+        <video id="smoothContent" src="/video/intro60fps.mp4" playsInline webkit-playsinline="true" preload="auto" muted className="video-background hidden" ></video>
+        <div id="container"></div>
+        </div>
+    </>
   )
 }
 

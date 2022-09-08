@@ -16,9 +16,7 @@ function team(props) {
             position="Consultant"
             name="Clinton Johns"
             top="100px"
-            left="400px"
-            
-            
+            left="400px"           
           />          
         </div>
 
