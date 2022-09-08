@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 function Footer() {
   return (
-    <div className='bg-[#010101] min-h-[545px] w-[100vw] flex justify-center items-center border-t-[0.5px] border-indigo-500'>
+    <div className='bg-[#010101] min-h-[545px] w-[100vw] flex justify-center items-center border-t-[0.5px] border-indigo-500 relative'>
       <div className='text-white w-full  flex justify-between max-w-[80vw]'>
         <div>
           <h4 className='text-[36px] text-[#FF6600] mb-6'>Get in touch</h4>

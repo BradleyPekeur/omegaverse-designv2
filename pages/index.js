@@ -24,9 +24,9 @@ export default function Home() {
           <div className='flex-1'>
             <Image src="/img/home/Machine.png" alt="Twitter Button"  width={744} height={692}/> 
           </div>
-          <div className='flex-1 justify-center items-center h-full'>
+          <div className='flex-1 justify-center items-center h-full relative'>
             <h1 className='text-[#FF6600] mb-8 sHeading'>About Omega</h1>
-            <p className='text-white pText'>
+            <p className='text-white pText '>
             We are a large scale CNC & 3D printing, composites start up. We manufacture tooling, models, prototypes and patterns for numerous sectors. We support local initiatives that drive awareness and create innovation through re-purposing waste. We are passionate about sustainability, our economy and competitiveness as a country
             </p>
           </div>
@@ -35,7 +35,7 @@ export default function Home() {
 
 
 
-      <section className='flex w-full justify-center bg-no-repeat min-h-[100vh] items-center bg-cover bg-center' style=  {{backgroundImage:"url(/img/home/automotive.png)"}}>
+      <section className='flex w-full justify-center bg-no-repeat min-h-[100vh] items-center bg-cover bg-center relative' style=  {{backgroundImage:"url(/img/home/automotive.png)"}}>
         <div className='bg-red'>
           <div>Left</div>
           <div className='text-white'>Endless Possibilities</div>
