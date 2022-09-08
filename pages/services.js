@@ -3,7 +3,7 @@ import ServicesCards from '../components/ServicesCards'
 import { gsap } from "gsap/dist/gsap";
 
 
-function services(props) {
+function Services(props) {
 
   
   const card1 = useRef(null)
@@ -69,4 +69,4 @@ function services(props) {
   )
 }
 
-export default services
+export default Services

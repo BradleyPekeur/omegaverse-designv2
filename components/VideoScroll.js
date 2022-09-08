@@ -89,8 +89,8 @@ setTimeout(function () {
 
   return (
     <><div id="smoothWrapper">
-        <video id="smoothContent" src="/video/intro60fps.mp4" playsInline webkit-playsinline="true" preload="auto" muted className="video-background" ></video>
-        <video id="smoothContent" src="/video/intro60fps.mp4" playsInline webkit-playsinline="true" preload="auto" muted className="video-background hidden" ></video>
+        <video id="smoothContent" src="/video/intro60fps.mp4"  preload="auto" muted className="video-background" ></video>
+        <video id="smoothContent" src="/video/intro60fps.mp4"  preload="auto" muted className="video-background hidden" ></video>
         <div id="container"></div>
         </div>
     </>
