@@ -4,7 +4,6 @@ import { gsap } from "gsap/dist/gsap";
 
 
 function Services(props) {
-
   
   const card1 = useRef(null)
   const card2 = useRef(null)
@@ -28,37 +27,39 @@ function Services(props) {
   });
 
   return (
-    <div className='min-h-[100vh] w-full flex justify-center items-center bg-no-repeat' style={{backgroundImage:"url(./img/services/services.png) "}}>
-      <div className='flex h-[70vh] w-[82vw] columns-2'>
-        <div className='w-[50%] flex flex-col justify-center'>
+    <>
+    <div className='bg-red-500 min-h-[100vh] w-full flex justify-center items-center bg-no-repeat' style={{backgroundImage:"url(./img/services/services.png) "}}>
+      <div className='flex h-[70vh] w-[82vw] columns-2 flex-col md:flex-row '>
+        <div className='flex-1 flex flex-col justify-center'>
 
           <h1 className='text-white heading'>Services</h1>
           <span className='text-[#FF6600] sHeading'>Industries we server</span>
-        </div>
-        <div className='w-[50%]  flex justify-center items-center relative'>
-        <div className='w-full relative'>
-          <div className='card1 relative' ref={card1}>
-          <ServicesCards
-              title="DFM & DFA"
-              description="Design for manufacturing & 3D printing Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,"
-              textColor = "#FF6600"             
-            />
-          </div>
+        </div> 
+        <div className='  flex justify-center items-center relative flex-1'>
 
-            <div className='card2 absolute top-0 left-[29%] w-[600px]' ref={card2}>
-              <ServicesCards
-                title="Mega CNC Milling"
-                description="Multi axis composites machiningLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,"
-                textColor = "white"
-            
-              />
+        <div className='w-full relative flex flex-col md:flex-row'>
+            <div className='card1 ' ref={card1}>
+                <ServicesCards
+                    title="DFM & DFA"
+                    description="Design for manufacturing & 3D printing Lorem Ipsum is simply dummy text of the printing and typesetting industry.,"
+                    textColor = "#FF6600" 
+                    className="relative"             
+                  />
             </div>
-            <div className='card3 absolute top-0 left-[58%] w-[600px]' ref={card3} >
+
+            <div className='card2 relative' ref={card2}>
+                <ServicesCards
+                  title="Mega CNC Milling"
+                  description="Multi axis composites machiningLorem Ipsum is simply dummy text of the printing and typesetting industry. "
+                  textColor = "white"            
+                />
+            </div>
+
+            <div className='card3 relative' ref={card3} >
               <ServicesCards
                 title="Mega 3D Printing"
-                description = "Large scale 3D printing Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,"
-                textColor = "#FF6600"
-                
+                description = "Large scale 3D printing Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+                textColor = "#FF6600"                
               />
             </div>
         </div>
@@ -66,6 +67,8 @@ function Services(props) {
         </div>
       </div>
     </div>
+    <div className='bg-blue-500 h-[1000px]'></div>
+    </>
   )
 }
 

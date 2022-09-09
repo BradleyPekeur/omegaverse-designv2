@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import HorizontalScroller from '../components/HorizontalScroller'
 import MainHero from '../components/MainHero'
 import Navbar from '../components/Navbar'
 import SideSocialBar from '../components/SideSocialBar'
@@ -38,8 +39,12 @@ export default function Home() {
       <section className='flex w-full justify-center bg-no-repeat min-h-[100vh] items-center bg-cover bg-center relative' style=  {{backgroundImage:"url(/img/home/automotive.png)"}}>
         <div className='bg-red'>
           <div>Left</div>
-          <div className='text-white'>Endless Possibilities</div>
+          <div className='text-white'>Industries We Serve</div>
         </div>
+      </section>
+
+      <section className='relative'>
+        <HorizontalScroller/>
       </section>
 
     </div>

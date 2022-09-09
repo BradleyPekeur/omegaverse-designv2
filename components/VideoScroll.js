@@ -13,7 +13,6 @@ function VideoScroll() {
   useEffect(()=>{
 
 
-    console.clear();
     /* The encoding is super important here to enable frame-by-frame scrubbing. */
     
     // ffmpeg -i ~/Downloads/Toshiba\ video/original.mov -movflags faststart -vcodec libx264 -crf 23 -g 1 -pix_fmt yuv420p output.mp4
@@ -85,8 +84,7 @@ function VideoScroll() {
       }
     }, 1000);
     
-    /* ---------------------------------- */
-    
+    /* ---------------------------------- */   
     
 
 
@@ -96,10 +94,11 @@ function VideoScroll() {
 
 
   return (
-    <><div>
-        <video src="/intro60fps.mp4"  preload="auto" muted className="video-background" ></video>
+    <>
+    <div>
+        <video src="/intro60fps.mp4"  preload="auto" muted className="video-background " ></video>
         <div id="container"></div>
-        </div>
+      </div>
     </>
   )
 }

@@ -6,7 +6,7 @@ const nextConfig = {
     domains: ['usembleit.co.za'],
     loader: 'akamai',
     path: '',
-    
+    exportTrailingSlash: true  
  
   },
 

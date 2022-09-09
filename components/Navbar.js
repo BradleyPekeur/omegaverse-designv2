@@ -13,7 +13,7 @@ function Navbar() {
   };  
 
   return (
-    <nav className='flex justify-around w-screen fixed pt-14 px-[20px] md:px-[170px] z-50'>
+    <nav className=' navbg flex justify-around w-screen fixed pt-14 pb-14 mb-10 px-[20px] md:px-[170px] z-50'>
       <Link href="./"><div className='min-h-[40px]'><Image src="/omegaverse_logo.svg" alt="Logo"  width={200} height={40} /></div></Link>
       <ul className='hidden md:flex space-x-4 w-full justify-center text-white text-size-4' >
         <li><Link href="./">Home</Link></li>
