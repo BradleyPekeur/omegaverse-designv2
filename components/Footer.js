@@ -23,9 +23,9 @@ function Footer() {
 
         <div>
           <div className='flex'>
-            <div className='w-6'><Image  src="/img/social/facebook.svg" alt="Facebook Button"  width={45} height={45}/></div>        
-            <div className='w-6'><Image src="/img/social/twitter.svg" alt="Twitter Button"  width={45} height={45}/></div>
-            <div className='w-6'><Image src="/img/social/linkedin.svg" alt="Linkedin Button"  width={45} height={45}/></div>           
+            <div className='w-6'><Image  src="/social/facebook.svg" alt="Facebook Button"  width={45} height={45}/></div>        
+            <div className='w-6'><Image src="/social/twitter.svg" alt="Twitter Button"  width={45} height={45}/></div>
+            <div className='w-6'><Image src="/linkedin.svg" alt="Linkedin Button"  width={45} height={45}/></div>           
           </div>
 
           <div className='h-[2px] w-full bg-white mb-4 pr-4'></div>
