@@ -4,6 +4,9 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['usembleit.co.za'],
+    loader: 'akamai',
+    path: '',
+    
  
   },
 
