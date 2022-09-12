@@ -96,7 +96,7 @@ function VideoScroll() {
   return (
     <>
     <div>
-        <video src="/intro60fps.mp4"  preload="auto" muted className="video-background " ></video>
+        <video src="/video/intro60fps2.mp4"  preload="auto" muted className="video-background " ></video>
         <div id="container"></div>
       </div>
     </>

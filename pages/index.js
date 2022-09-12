@@ -36,11 +36,59 @@ export default function Home() {
 
 
 
-      <section className='flex w-full justify-center bg-no-repeat min-h-[100vh] items-center bg-cover bg-center relative' style=  {{backgroundImage:"url(/img/home/automotive.png)"}}>
-        <div className='bg-red'>
-          <div>Left</div>
-          <div className='text-white'>Industries We Serve</div>
+      <section className='flex w-full justify-center bg-no-repeat min-h-[100vh] items-center bg-cover bg-center relative ' >
+        <div className='h-full w-[80vw] flex flex-col md:flex-row'>
+
+          <div className='text-white flex-1'>
+            <h1 className='sHeading mb-16'>Industries We Serve</h1>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              <div className='border border-[#FF6600] flex flex-col items-center justify-center p-5'>
+                <img src="/img/services/DFMinfo.png" alt="Twitter Button" className='w-[100px]' />
+                <span className='pText mr-4 text-[#FF6600]'>Marine</span>
+              </div>
+              <div className='border border-[#FF6600] flex flex-col items-center justify-center p-5'>
+                <img src="/img/services/DFMinfo.png" alt="Twitter Button" className='w-[100px]' />
+                <span className='pText mr-4 text-[#FF6600]'>Film</span>
+              </div>
+              <div className='border border-[#FF6600] flex flex-col items-center justify-center p-5'>
+                <img src="/img/services/DFMinfo.png" alt="Twitter Button" className='w-[100px]' />
+                <span className='pText mr-4 text-[#FF6600]'>Automotive</span>
+              </div>
+              <div className='border border-[#FF6600] flex flex-col items-center justify-center p-5'>
+                <img src="/img/services/DFMinfo.png" alt="Twitter Button" className='w-[100px]' />
+                <span className='pText mr-4 text-[#FF6600]'>Medical</span>
+              </div>
+              <div className='border border-[#FF6600] flex flex-col items-center justify-center p-5'>
+                <img src="/img/services/DFMinfo.png" alt="Twitter Button" className='w-[100px]' />
+                <span className='pText mr-4 text-[#FF6600]'>Aerospace</span>
+              </div>
+              <div className='border border-[#FF6600] flex flex-col items-center justify-center p-5'>
+                <img src="/img/services/DFMinfo.png" alt="Twitter Button" className='w-[100px]' />
+                <span className='pText mr-4 text-[#FF6600]'>Military</span>
+              </div>
+              <div className='border border-[#FF6600] flex flex-col items-center justify-center p-5'>
+                <img src="/img/services/DFMinfo.png" alt="Twitter Button" className='w-[100px]' />
+                <span className='pText mr-4 text-[#FF6600]'>Electronics</span>
+              </div>
+              <div className='border border-[#FF6600] flex flex-col items-center justify-center p-5'>
+                <img src="/img/services/DFMinfo.png" alt="Twitter Button" className='w-[100px]' />
+                <span className='pText mr-4 text-[#FF6600]'>Medical</span>
+              </div>
+             
+              
+            </div>
+            <ul className=''>
+              <li></li>
+              <li><span className='pText mr-4 text-[#FF6600]'></span></li>
+              <li><span className='pText mr-4 text-[#FF6600]'></span></li>
+              <li><span className='pText mr-4 text-[#FF6600]'></span></li>
+              <li><span className='pText mr-4 text-[#FF6600]'></span></li>
+              <li><span className='pText mr-4 text-[#FF6600]'></span></li>
+            </ul>
+          </div> 
+          <div className='w-full flex-1 bg-orange-500' ><img src="/img/home/Picture2.jpg" alt="Main Pic"  /></div>
         </div>
+   
       </section>
 
       <section className='relative'>
