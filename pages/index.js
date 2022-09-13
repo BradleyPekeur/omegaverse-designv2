@@ -15,7 +15,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />        
       </Head>
       <main className={styles.main}>
-        <Navbar/>
         <SideSocialBar/>
         <MainHero/>
       </main>
@@ -37,7 +36,7 @@ export default function Home() {
 
 
       <section className='flex w-full justify-center bg-no-repeat min-h-[100vh] items-center bg-cover bg-center relative ' >
-        <div className='h-full w-[80vw] flex flex-col md:flex-row'>
+        <div className='h-full w-[80vw] flex flex-col md:flex-row gap-10'>
 
           <div className='text-white flex-1'>
             <h1 className='sHeading mb-16'>Industries We Serve</h1>
