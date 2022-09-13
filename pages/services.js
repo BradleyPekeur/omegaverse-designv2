@@ -8,12 +8,6 @@ import { SiBlockchaindotcom} from 'react-icons/si';
 import { GiCutDiamond} from 'react-icons/gi';
 
 
-
-
-
-
-
-
 function Services(props) {
   
   // const card1 = useRef(null)
@@ -39,7 +33,7 @@ function Services(props) {
 
   return (
     <>
-    <div className='bg-red-500 min-h-[100vh] w-full flex justify-center items-center bg-no-repeat' style={{backgroundImage:"url(./img/services/services.png) "}}>
+    <div className='min-h-[140vh] md:min-h-[100vh]  w-full flex justify-center items-center bg-cover bg-no-repeat' style={{backgroundImage:"url(./img/services/services.png) "}}>
       <div className='flex h-[70vh] w-[82vw] columns-2 flex-col md:flex-row '>
         <div className='flex-1 flex flex-col justify-center'>
 
@@ -75,10 +69,8 @@ function Services(props) {
             </div>
         </div> */}
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-
-
-              <div className='border border-[#FF6600] flex flex-col items-center justify-center p-5'>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
+              <div className='bg-blue-700 border border-[#FF6600] flex flex-col items-center justify-center p-5'>
               <ServicesCards
                     icon = {<TbBuildingBridge size={50} color="white" className="mb-10"/>}
                     title="DFM & DFA"
@@ -89,7 +81,7 @@ function Services(props) {
                   />               
               </div>
 
-              <div className='border border-[#FF6600] flex flex-col items-center justify-center p-5'>
+              <div className='bg-blue-700 border border-[#FF6600] flex flex-col items-center justify-center p-5'>
               <ServicesCards
                   icon = {<GiCutDiamond size={50} color="white" className="mb-10"/>}
                   title="Mega CNC Milling"
@@ -98,7 +90,7 @@ function Services(props) {
                 />               
               </div>
 
-              <div className='border border-[#FF6600] flex flex-col items-center justify-center p-5'>
+              <div className='bg-blue-700 border border-[#FF6600] flex flex-col items-center justify-center p-5 '>
                 <ServicesCards
                 icon = {<SiBlockchaindotcom size={50} color="white" className="mb-10"/>}
                   title="Mega 3D Printing"
@@ -112,7 +104,7 @@ function Services(props) {
         </div>
       </div>
     </div>
-    <div className='bg-blue-500 h-[1000px]'></div>
+    
     </>
   )
 }
