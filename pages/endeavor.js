@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 function endeavor() {
   return (
+    <>
     <div className='min-h-screen flex justify-center items-center bg-[#010101]'>
       <div className=' flex flex-col md:flex-row max-w-[80vw]'>
         <div className='basis-1/2 relative mb-10'>  
@@ -14,7 +15,8 @@ function endeavor() {
           </p>
         </div>
       </div>
-    </div>
+    </div>    
+   </>
   )
 }
 

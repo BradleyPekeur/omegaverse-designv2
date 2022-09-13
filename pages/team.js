@@ -1,7 +1,7 @@
 import React from 'react'
 import TeamId from '../components/TeamId'
 
-function team(props) {
+function team(props) {  
   return (
     <div className='pt-24 relative overflow-hidden min-h-[100vh] intro-hero'>
       <div className='bg-[rgba(1,1,1,0.5)] absolute top-0 left-0 w-screen h-full z-[-10]'></div>   
@@ -9,7 +9,7 @@ function team(props) {
        <div className='z-20 flex w-full h-full justify-center pt-20'>
         <h1 className='text-[#FF6600] text-[36px] mb-10'>Our Team</h1>
        </div> 
-       <div className='teamsContainer relative min-h-[600px] w-screen pl-4'>
+       <div className='teamsContainer flex flex-col justify-center items-center relative min-h-[600px]  pl-4'>
         <div className='md:absolute top-[100px] left-[28%] mb-8'>
           <TeamId
             profile ="ClintonJohns.png"
@@ -42,15 +42,10 @@ function team(props) {
             position="CNC Operator"
             name="Kevin Ruzvidzo"
           />          
-        </div>
-
- 
-   
-
-
-          
+        </div>        
 
         </div>
+        
     </div>
   ) 
 }

@@ -6,7 +6,7 @@ function MobileVideoScroll() {
     <>
     <div>
 
-        <video src="http://usembleit.co.za/video/MobileIntro2.mp4" autoPlay preload="auto" muted className="video-background1" ></video>
+        <video src="/video/MobileIntro2.mp4" autoPlay preload="auto" muted className="video-background1" ></video>
         <div id="container1"></div>
       </div>
     </>
