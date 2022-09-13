@@ -6,11 +6,11 @@ function ServicesCards(props) {
     <div className={`bg-[${props.colorBg}]  rounded-3xl  flex flex-col py-20 min-w-[260px] px-4   max-h-[480px]`}>
       <div className='w-full  '>
         <div className='flex flex-col w- justify-center items-center'>
-          <Image src="/img/services/DFMinfo.png" alt="Twitter Button"  width={150} height={155}/>          
+          {props.icon}          
         </div>
         <span className={`text-[${props.textColor}] pText `}>{ props.title }</span>
       </div>
-      <div className='text-white p-4'>
+      <div className='text-white'>
       { props.description}
       </div>
     </div>
