@@ -65,7 +65,7 @@ function HorizontalScroller() {
       tl.to('.block-anim', {
         duration: 1,
         ease: 'power3',
-        clipPath: 'inset(100% 25% 25.01% 25.01% round 25vw 25vw 25.01vw 25.01vw)'
+        clipPath: 'inset(50% 50% 50% 50% round 25vw 25vw 25.01vw 25.01vw)'
       });
     
       ScrollTrigger.create({ 

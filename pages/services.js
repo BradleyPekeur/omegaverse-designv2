@@ -70,7 +70,7 @@ function Services(props) {
         </div> */}
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
-              <div className='bg-blue-700 border border-[#FF6600] flex flex-col items-center justify-center p-5'>
+              <div className='bg-[#00000077] border border-[#FF6600] flex flex-col items-center justify-center p-5'>
               <ServicesCards
                     icon = {<TbBuildingBridge size={50} color="white" className="mb-10"/>}
                     title="DFM & DFA"
@@ -81,7 +81,7 @@ function Services(props) {
                   />               
               </div>
 
-              <div className='bg-blue-700 border border-[#FF6600] flex flex-col items-center justify-center p-5'>
+              <div className='bg-[#00000077] border border-[#FF6600] flex flex-col items-center justify-center p-5'>
               <ServicesCards
                   icon = {<GiCutDiamond size={50} color="white" className="mb-10"/>}
                   title="Mega CNC Milling"
@@ -90,7 +90,7 @@ function Services(props) {
                 />               
               </div>
 
-              <div className='bg-blue-700 border border-[#FF6600] flex flex-col items-center justify-center p-5 '>
+              <div className='bg-[#00000077] border border-[#FF6600] flex flex-col items-center justify-center p-5 '>
                 <ServicesCards
                 icon = {<SiBlockchaindotcom size={50} color="white" className="mb-10"/>}
                   title="Mega 3D Printing"
