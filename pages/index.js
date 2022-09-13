@@ -6,6 +6,29 @@ import Navbar from '../components/Navbar'
 import SideSocialBar from '../components/SideSocialBar'
 import styles from '../styles/Home.module.css'
 
+import { ImAirplane} from 'react-icons/im';
+import { GiSubmarine, GiMeepleArmy, GiElectric} from 'react-icons/gi';
+import { FaCar, FaHandHoldingMedical} from 'react-icons/fa';
+import { BsCameraReelsFill} from 'react-icons/bs';
+import { RiBuilding2Fill} from 'react-icons/ri';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -42,36 +65,36 @@ export default function Home() {
             <h1 className='sHeading mb-16'>Industries We Serve</h1>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               <div className='border border-[#FF6600] flex flex-col items-center justify-center p-5'>
-                <img src="/img/services/DFMinfo.png" alt="Twitter Button" className='w-[100px]' />
+                <GiSubmarine size={50} className="p-1 mb-2"/>
                 <span className='pText mr-4 text-[#FF6600]'>Marine</span>
               </div>
               <div className='border border-[#FF6600] flex flex-col items-center justify-center p-5'>
-                <img src="/img/services/DFMinfo.png" alt="Twitter Button" className='w-[100px]' />
+                <BsCameraReelsFill size={50} className="p-1 mb-2"/>
                 <span className='pText mr-4 text-[#FF6600]'>Film</span>
               </div>
               <div className='border border-[#FF6600] flex flex-col items-center justify-center p-5'>
-                <img src="/img/services/DFMinfo.png" alt="Twitter Button" className='w-[100px]' />
+                <FaCar size={50} className="p-1 mb-2"/>
                 <span className='pText mr-4 text-[#FF6600]'>Automotive</span>
               </div>
               <div className='border border-[#FF6600] flex flex-col items-center justify-center p-5'>
-                <img src="/img/services/DFMinfo.png" alt="Twitter Button" className='w-[100px]' />
+                <FaHandHoldingMedical size={50} className="p-1 mb-2"/>
                 <span className='pText mr-4 text-[#FF6600]'>Medical</span>
               </div>
               <div className='border border-[#FF6600] flex flex-col items-center justify-center p-5'>
-                <img src="/img/services/DFMinfo.png" alt="Twitter Button" className='w-[100px]' />
+                <ImAirplane size={50} className="p-1 mb-2"/>
                 <span className='pText mr-4 text-[#FF6600]'>Aerospace</span>
               </div>
               <div className='border border-[#FF6600] flex flex-col items-center justify-center p-5'>
-                <img src="/img/services/DFMinfo.png" alt="Twitter Button" className='w-[100px]' />
+                <GiMeepleArmy size={50} className="p-1 mb-2"/>
                 <span className='pText mr-4 text-[#FF6600]'>Military</span>
               </div>
               <div className='border border-[#FF6600] flex flex-col items-center justify-center p-5'>
-                <img src="/img/services/DFMinfo.png" alt="Twitter Button" className='w-[100px]' />
+                <GiElectric size={50} className="p-1 mb-2"/>
                 <span className='pText mr-4 text-[#FF6600]'>Electronics</span>
               </div>
               <div className='border border-[#FF6600] flex flex-col items-center justify-center p-5'>
-                <img src="/img/services/DFMinfo.png" alt="Twitter Button" className='w-[100px]' />
-                <span className='pText mr-4 text-[#FF6600]'>Medical</span>
+                <RiBuilding2Fill size={50} className="p-1 mb-2"/>
+                <span className='pText mr-4 text-[#FF6600]'>Architectural</span>
               </div>
              
               

@@ -27,9 +27,6 @@ function HorizontalScroller() {
     setContentImg('/img/home/Picture2.jpg');
   }
 
-
-
-
   useEffect(()=>{
     const horizontalSections = gsap.utils.toArray('.horizontal-sections');
 
@@ -82,11 +79,6 @@ function HorizontalScroller() {
       
      });
   },[])
-
-
-
-
-
 
   return (
     <div className=' text-white min-h-[600vh]'>

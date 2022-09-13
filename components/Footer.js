@@ -9,23 +9,23 @@ function Footer() {
         <div>
           <h4 className='sHeading text-[#FF6600] mb-6'>Get in touch</h4>
           <div className='flex items-center'>
-            <span><div className='w-6 mr-2'><img  src="http://usembleit.co.za/img/social/Twitter.svg" alt="Facebook Button"  width={45} height={45}/></div></span>
+            <span><div className='w-6 mr-2'><img  src="/img/social/Twitter.svg" alt="Facebook Button"  width={45} height={45}/></div></span>
             <span className='pText leading-16'>omegaverse.com</span>
           </div>
           <div className='flex items-center'>
-            <span><div className='w-6 mr-2'><img  src="http://usembleit.co.za/img/social/Facebook.svg" alt="Facebook Button"  width={45} height={45}/></div> </span>
+            <span><div className='w-6 mr-2'><img  src="/img/social/Facebook.svg" alt="Facebook Button"  width={45} height={45}/></div> </span>
             <span className='pText'>082 820 2843</span>
           </div>
           <div className='flex items-center'>
-            <span><div className='w-6 mr-2'><img  src="http://usembleit.co.za/img/social/Twitter.svg" alt="Facebook Button"  width={45} height={45}/></div> </span><span className='pText'>Cape Town</span>
+            <span><div className='w-6 mr-2'><img  src="/img/social/Twitter.svg" alt="Facebook Button"  width={45} height={45}/></div> </span><span className='pText'>Cape Town</span>
           </div>
         </div>
 
         <div>
           <div className='flex'>
-            <div className='w-6'><img  src="http://usembleit.co.za/img/social/Facebook.svg" alt="Facebook Button"  width={45} height={45}/></div>        
-            <div className='w-6'><img src="http://usembleit.co.za/img/social/Twitter.svg" alt="Twitter Button"  width={45} height={45}/></div>
-            <div className='w-6'><img src="http://usembleit.co.za/img/social/LinkedIn.svg" alt="Linkedin Button"  width={45} height={45}/></div>           
+            <div className='w-6'><img  src="/img/social/Facebook.svg" alt="Facebook Button"  width={45} height={45}/></div>        
+            <div className='w-6'><img src="/img/social/Twitter.svg" alt="Twitter Button"  width={45} height={45}/></div>
+            <div className='w-6'><img src="/img/social/LinkedIn.svg" alt="Linkedin Button"  width={45} height={45}/></div>           
           </div>
 
           <div className='h-[2px] w-full bg-white mb-4 pr-4'></div>
