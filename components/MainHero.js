@@ -47,8 +47,12 @@ function MainHero() {
         ></video>
          
     </div> */}
-			{/* <div className="hidden md:flex"><VideoScroll /></div>
-    <div className="flex md:hidden"><MobileVideoScroll /></div> */}
+			<div className="hidden md:flex">
+				<VideoScroll />
+			</div>
+			<div className="flex md:hidden">
+				<MobileVideoScroll />
+			</div>
 
 			<div
 				className="min-h-[100vh] bg-[#010101]  flex  justify-center items-center"
