@@ -60,6 +60,7 @@ function Footer() {
 							<a
 								href="https://www.linkedin.com/company/omegaverse/"
 								target="_blank"
+								rel="noreferrer"
 							>
 								<img
 									src="/img/social/LinkedIn.svg"

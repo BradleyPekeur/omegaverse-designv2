@@ -142,12 +142,14 @@ function HorizontalScroller() {
 									<span className="text-[#FF6600]">together</span>
 								</h2>
 								<div className="flex gap-4 justify-center items-center">
-									<button className="bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+									{/* <button className="bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
 										Visit Store
-									</button>
-									<button className="bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-										Get in touch
-									</button>
+									</button> */}
+									<a href="mailto:info@o-megaverse.com">
+										<button className="bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+											Get in touch
+										</button>
+									</a>
 								</div>
 							</div>
 
