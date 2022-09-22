@@ -16,7 +16,7 @@ function Navbar() {
 	};
 
 	return (
-		<nav className="navbarBG navbg flex justify-between md:justify-around w-screen fixed pt-14 pb-14 mb-10 px-[30px] md:px-[170px] z-50">
+		<nav className="navbarBG navbg flex justify-between md:justify-around w-screen fixed pt-7 md:pt-14 pb-14 mb-10 px-[30px] md:px-[170px] z-50">
 			<Link href="./">
 				<div className="min-h-[40px]">
 					<Image

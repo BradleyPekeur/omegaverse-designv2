@@ -91,7 +91,7 @@ function HorizontalScroller() {
 	}, []);
 
 	return (
-		<div className=" text-white min-h-[200vh]">
+		<div className=" text-white min-h-[550vh]">
 			<div className="spacer"></div>
 
 			<div className="horizontal-sections">
@@ -195,12 +195,12 @@ function HorizontalScroller() {
 				</div>
 			</div>
 
-			<div className="section section-lightblue  ">
+			{/* <div className="section section-lightblue  ">
 				<h2>Some section 1</h2>
 			</div>
 			<div className="section ">
 				<h2>Some section 2</h2>
-			</div>
+			</div> */}
 		</div>
 	);
 }
