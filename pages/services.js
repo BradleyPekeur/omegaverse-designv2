@@ -32,7 +32,7 @@ function Services(props) {
 	return (
 		<div>
 			<div
-				className="py-36 min-h-screen w-full flex justify-center items-center bg-cover bg-no-repeat"
+				className="py-14 min-h-screen w-full flex justify-center items-center bg-cover bg-no-repeat"
 				style={{ backgroundImage: "url(./img/services/services.png) " }}
 			>
 				<div className="max-w-[90vw] md:max-w-[80vw] flex flex-col md:flex-row">
