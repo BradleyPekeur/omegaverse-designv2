@@ -84,7 +84,7 @@ function VideoScroll() {
 		<>
 			<div>
 				<video
-					src="/video/OMEGAINTRO2.mp4"
+					src="/video/OMEGAVERSE.mp4"
 					preload="auto"
 					muted
 					className="video-background "
