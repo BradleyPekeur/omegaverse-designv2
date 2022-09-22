@@ -16,7 +16,7 @@ function Navbar() {
 	};
 
 	return (
-		<nav className="navbarBG navbg flex justify-around w-screen fixed pt-14 pb-14 mb-10 px-[20px] md:px-[170px] z-50">
+		<nav className="navbarBG navbg flex justify-between md:justify-around w-screen fixed pt-14 pb-14 mb-10 px-[30px] md:px-[170px] z-50">
 			<Link href="./">
 				<div className="min-h-[40px]">
 					<Image
@@ -57,7 +57,7 @@ function Navbar() {
 			<ul
 				className={
 					nav
-						? "fixed left-0 top-0 w-[60%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500 text-[#FF6600] pl-[90px] pt-[60px]"
+						? "fixed left-0 top-0 w-[80%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500 text-[#FF6600] pl-[90px] pt-[60px]"
 						: "ease-in-out duration-500 fixed left-[-100%] "
 				}
 			>
