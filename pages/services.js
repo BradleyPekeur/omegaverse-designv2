@@ -35,7 +35,7 @@ function Services(props) {
 				className="py-36 min-h-screen w-full flex justify-center items-center bg-cover bg-no-repeat"
 				style={{ backgroundImage: "url(./img/services/services.png) " }}
 			>
-				<div className="w-[80vw] flex flex-col md:flex-row">
+				<div className="max-w-[90vw] md:max-w-[80vw] flex flex-col md:flex-row">
 					<div className="min-h-screen flex flex-col md:flex-row justify-center items-center">
 						<div className="flex-1 w-full">
 							<div className="flex-1 flex flex-col mb-16">
@@ -95,7 +95,7 @@ function Services(props) {
 			</div>
 
 			<div className="min-h-screen flex justify-center items-center bg-stone-100">
-				<div className="flex flex-col md:flex-row gap-4 w-[80vw]">
+				<div className="flex flex-col md:flex-row gap-4 max-w-[90vw] md:max-w-[80vw]">
 					<div className="flex-1 mb-16">
 						<img src="/img/services/med.jpg" alt="" />
 					</div>
