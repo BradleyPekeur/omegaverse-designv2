@@ -57,8 +57,8 @@ function Navbar() {
 			<ul
 				className={
 					nav
-						? "fixed left-0 top-0 w-[80%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500 text-[#FF6600] pl-[90px] pt-[60px]"
-						: "ease-in-out duration-500 fixed left-[-100%] "
+						? "fixed left-0 top-0 w-[80%] h-full border-r border-r-gray-900 bg-[#000300] ease-in-out duration-500 text-[#FF6600] pl-[50px] pr-[10px] pt-[60px]"
+						: "ease-in-out duration-500 fixed h-full left-[-100%] "
 				}
 			>
 				<div className="min-h-[40px]">
