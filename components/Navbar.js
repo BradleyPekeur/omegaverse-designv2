@@ -11,6 +11,10 @@ function Navbar() {
 		setNav(!nav);
 	};
 
+	const closeNav = () => {
+		setNav(false);
+	};
+
 	return (
 		<nav className="navbarBG navbg flex justify-around w-screen fixed pt-14 pb-14 mb-10 px-[20px] md:px-[170px] z-50">
 			<Link href="./">
@@ -66,19 +70,29 @@ function Navbar() {
 					/>
 				</div>
 				<li className="p-4 border-b border-gray-600">
-					<Link href="./">Home</Link>
+					<Link href="./">
+						<span onClick={closeNav}>Home</span>
+					</Link>
 				</li>
 				<li className="p-4 border-b border-gray-600">
-					<Link href="./endeavor">Endeavor</Link>
+					<Link href="./endeavor">
+						<span onClick={closeNav}>Endeavor</span>
+					</Link>
 				</li>
 				<li className="p-4 border-b border-gray-600">
-					<Link href="./services">Services</Link>
+					<Link href="./services">
+						<span onClick={closeNav}>Services</span>
+					</Link>
 				</li>
 				<li className="p-4 border-b border-gray-600">
-					<Link href="./team">Team</Link>
+					<Link href="./team">
+						<span onClick={closeNav}>Team</span>
+					</Link>
 				</li>
 				<li className="p-4">
-					<Link href="./contact">Contact Us</Link>
+					<Link href="./contact">
+						<span onClick={closeNav}>Contact Us</span>
+					</Link>
 				</li>
 			</ul>
 		</nav>

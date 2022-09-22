@@ -16,8 +16,6 @@ function MainHero() {
 	useEffect(() => {
 		tl.current = gsap
 			.timeline()
-			// .fromTo(videoIntro.current, {opacity:1 }, {opacity:1,delay:0, duration:6})
-			// .fromTo(heroSection.current, {display:"block" }, {display:"none", delay:0,duration:3},"<")
 
 			.fromTo(
 				transformer.current,
@@ -38,20 +36,13 @@ function MainHero() {
 
 	return (
 		<>
-			{/* <div className='pt-24 relative overflow-hidden min-h-[100vh] intro-hero' 
-    ref={heroSection}
-
-    >   
-        <video className='absolute top-0 left-0 w-full h-full object-cover z-30' src="/video/intro60fps.mp4"  muted controls 
-        ref={videoIntro}
-        ></video>
-         
-    </div> */}
-			<div className="hidden md:flex">
-				<VideoScroll />
-			</div>
-			<div className="flex md:hidden">
-				<MobileVideoScroll />
+			<div className="">
+				<div className="hidden md:flex">
+					<VideoScroll />
+				</div>
+				{/* <div className="flex md:hidden">
+					<MobileVideoScroll />
+				</div> */}
 			</div>
 
 			<div
