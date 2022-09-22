@@ -53,7 +53,7 @@ export default function Home() {
 				<div className="h-full max-w-[90vw] md:max-w-[80vw] flex flex-col md:flex-row gap-10">
 					<div className="text-white flex-1">
 						<h1 className="sHeading mb-16">Industries We Serve</h1>
-						<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+						<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
 							<div className="border border-[#FF6600] flex flex-col items-center justify-center p-5">
 								<GiSubmarine size={50} className="p-1 mb-2" />
 								<span className="pText mr-4 text-[#FF6600]">Marine</span>
@@ -66,10 +66,10 @@ export default function Home() {
 								<FaCar size={50} className="p-1 mb-2" />
 								<span className="pText mr-4 text-[#FF6600]">Automotive</span>
 							</div>
-							<div className="border border-[#FF6600] flex flex-col items-center justify-center p-5">
+							{/* <div className="border border-[#FF6600] flex flex-col items-center justify-center p-5">
 								<FaHandHoldingMedical size={50} className="p-1 mb-2" />
 								<span className="pText mr-4 text-[#FF6600]">Medical</span>
-							</div>
+							</div> */}
 							<div className="border border-[#FF6600] flex flex-col items-center justify-center p-5">
 								<ImAirplane size={50} className="p-1 mb-2" />
 								<span className="pText mr-4 text-[#FF6600]">Aerospace</span>
@@ -78,10 +78,10 @@ export default function Home() {
 								<GiMeepleArmy size={50} className="p-1 mb-2" />
 								<span className="pText mr-4 text-[#FF6600]">Military</span>
 							</div>
-							<div className="border border-[#FF6600] flex flex-col items-center justify-center p-5">
+							{/* <div className="border border-[#FF6600] flex flex-col items-center justify-center p-5">
 								<GiElectric size={50} className="p-1 mb-2" />
 								<span className="pText mr-4 text-[#FF6600]">Electronics</span>
-							</div>
+							</div> */}
 							<div className="border border-[#FF6600] flex flex-col items-center justify-center p-5">
 								<RiBuilding2Fill size={50} className="p-1 mb-2" />
 								<span className="pText mr-4 text-[#FF6600]">Architectural</span>

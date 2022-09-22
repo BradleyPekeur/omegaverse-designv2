@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaHamburger } from "react-icons/fa";
-import { GiSplitCross } from "react-icons/gi";
+import { GiSplitCross, GiHamburgerMenu } from "react-icons/gi";
 
 function Navbar() {
 	const [nav, setNav] = useState(false);
@@ -44,14 +44,14 @@ function Navbar() {
 					<Link href="./contact">Contact Us</Link>
 				</li>
 			</ul>
-			<button className="bg-[#FF6600]  px-1 rounded-full w-[200px] hidden md:flex justify-center items-center">
+			<button className="bg-[#FF6600]  px-1 rounded-full w-[200px] hidden  justify-center items-center">
 				Store
 			</button>
 			<div onClick={handleNav} className="block md:hidden z-50">
 				{nav ? (
 					<GiSplitCross size={20} style={{ color: "white" }} />
 				) : (
-					<FaHamburger size={20} style={{ color: "white" }} />
+					<GiHamburgerMenu size={20} style={{ color: "white" }} />
 				)}
 			</div>
 			<ul

@@ -2,6 +2,10 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import { MdEmail } from "react-icons/md";
+import { FiPhoneCall } from "react-icons/fi";
+import { ImLocation2 } from "react-icons/im";
+
 function Footer() {
 	return (
 		<div className="bg-[#010101] min-h-[545px] w-[100vw] flex justify-center items-center border-t-[0.5px] border-indigo-500 relative">
@@ -11,25 +15,15 @@ function Footer() {
 					<div className="flex items-center">
 						<span>
 							<div className="w-6 mr-2">
-								<img
-									src="/img/social/Twitter.svg"
-									alt="Facebook Button"
-									width={45}
-									height={45}
-								/>
+								<MdEmail />
 							</div>
 						</span>
-						<span className="pText leading-16">omegaverse.com</span>
+						<span className="pText leading-16">info@o-megaverse.com</span>
 					</div>
 					<div className="flex items-center">
 						<span>
 							<div className="w-6 mr-2">
-								<img
-									src="/img/social/Facebook.svg"
-									alt="Facebook Button"
-									width={45}
-									height={45}
-								/>
+								<FiPhoneCall />
 							</div>{" "}
 						</span>
 						<span className="pText">+27 87 820 8800</span>
@@ -37,13 +31,8 @@ function Footer() {
 					<div className="flex items-center">
 						<span>
 							<div className="w-6 mr-2">
-								<img
-									src="/img/social/Twitter.svg"
-									alt="Facebook Button"
-									width={45}
-									height={45}
-								/>
-							</div>{" "}
+								<ImLocation2 />
+							</div>
 						</span>
 						<span className="pText">Cape Town</span>
 					</div>
@@ -59,21 +48,26 @@ function Footer() {
 								height={45}
 							/>
 						</div>
-						<div className="w-6">
+						{/* <div className="w-6">
 							<img
 								src="/img/social/Twitter.svg"
 								alt="Twitter Button"
 								width={45}
 								height={45}
 							/>
-						</div>
+						</div> */}
 						<div className="w-6">
-							<img
-								src="/img/social/LinkedIn.svg"
-								alt="Linkedin Button"
-								width={45}
-								height={45}
-							/>
+							<a
+								href="https://www.linkedin.com/company/omegaverse/"
+								target="_blank"
+							>
+								<img
+									src="/img/social/LinkedIn.svg"
+									alt="Linkedin Button"
+									width={45}
+									height={45}
+								/>
+							</a>
 						</div>
 					</div>
 

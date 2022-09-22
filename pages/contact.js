@@ -1,15 +1,16 @@
 import React from "react";
 
-import { ImAirplane } from "react-icons/im";
-import { GiSubmarine, GiMeepleArmy, GiElectric } from "react-icons/gi";
+import { GiSubmarine } from "react-icons/gi";
 import { FaCar, FaHandHoldingMedical } from "react-icons/fa";
-import { BsCameraReelsFill } from "react-icons/bs";
-import { RiBuilding2Fill } from "react-icons/ri";
+import { GrMapLocation } from "react-icons/gr";
+import { MdEmail } from "react-icons/md";
+import { FiPhoneCall } from "react-icons/fi";
+import { ImLocation2 } from "react-icons/im";
 
 function contact() {
 	return (
-		<div className="flex flex-col justify-center items-center py-36 bg-slate-800 w-full">
-			<div className="max-w-[90vw] md:max-w-[80vw]">
+		<div className="flex flex-col justify-center items-center py-8 bg-slate-800 w-full">
+			{/* <div className="max-w-[90vw] md:max-w-[80vw]">
 				<div className="cards_container ">
 					<div className="pt-24 text-center">
 						<h1 className="sHeading text-[#FF6600] mb-6">
@@ -60,11 +61,13 @@ function contact() {
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> */}
 			<div className="max-w-[90vw] md:max-w-[80vw] py-36">
 				<div className="cards_container ">
 					<div className="pt-24 text-center flex justify-center flex-col items-center">
-						<h1 className="sHeading text-[#FF6600] mb-6">Check out our digs</h1>
+						<h1 className="sHeading text-[#FF6600] mb-6">
+							We’d love to hear from you
+						</h1>
 						<h3 className="pText text-white mb-12 w-[100%] md:w-[50%]">
 							Home is where your wifi connects automatically. Here’s where ours
 							does. Give us a call—or better yet—drop into our headquarters to
@@ -81,7 +84,7 @@ function contact() {
 								></iframe>
 							</div>
 							<div className="border border-[#FF6600] flex flex-col  p-5">
-								<FaCar size={50} className="p-1 mb-2" />
+								<GrMapLocation size={50} className="p-1 mb-2 " />
 
 								<ul>
 									<div>
@@ -89,25 +92,15 @@ function contact() {
 										<div className="flex items-center">
 											<span>
 												<div className="w-6 mr-2">
-													<img
-														src="/img/social/Twitter.svg"
-														alt="Facebook Button"
-														width={45}
-														height={45}
-													/>
+													<MdEmail />
 												</div>
 											</span>
-											<span className="leading-16">omegaverse.com</span>
+											<span className="leading-16">info@o-megaverse.com</span>
 										</div>
 										<div className="flex items-center">
 											<span>
 												<div className="w-6 mr-2">
-													<img
-														src="/img/social/Facebook.svg"
-														alt="Facebook Button"
-														width={45}
-														height={45}
-													/>
+													<FiPhoneCall />
 												</div>
 											</span>
 											<span>+27 87 820 8800</span>
@@ -115,12 +108,7 @@ function contact() {
 										<div className="flex items-center">
 											<span>
 												<div className="w-6 mr-2">
-													<img
-														src="/img/social/Twitter.svg"
-														alt="Facebook Button"
-														width={45}
-														height={45}
-													/>
+													<ImLocation2 />
 												</div>{" "}
 											</span>
 											<span>Cape Town</span>

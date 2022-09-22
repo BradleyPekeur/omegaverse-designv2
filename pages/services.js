@@ -57,7 +57,7 @@ function Services(props) {
 											/>
 										}
 										title="DFM & DFA"
-										description="Design for manufacturing & 3D printing Lorem Ipsum is simply dummy text of the printing and typesetting industry.,"
+										description="Design for manufacturing & 3D printing."
 										textColor="#FF6600"
 										className="relative"
 									/>
@@ -69,7 +69,7 @@ function Services(props) {
 											<GiCutDiamond size={50} color="white" className="mb-10" />
 										}
 										title="Mega CNC Milling"
-										description="Multi axis composites machiningLorem Ipsum is simply dummy text of the printing and typesetting industry. "
+										description="Multi axis composites machining printing and typesetting industry. "
 										textColor="white"
 									/>
 								</div>
@@ -84,7 +84,7 @@ function Services(props) {
 											/>
 										}
 										title="Mega 3D Printing"
-										description="Large scale 3D printing Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+										description="Large scale 3D printing (Coming Soon)"
 										textColor="#FF6600"
 									/>
 								</div>
@@ -94,7 +94,7 @@ function Services(props) {
 				</div>
 			</div>
 
-			<div className="min-h-screen flex justify-center items-center bg-stone-100">
+			{/* <div className="min-h-screen flex justify-center items-center bg-stone-100">
 				<div className="flex flex-col md:flex-row gap-4 max-w-[90vw] md:max-w-[80vw]">
 					<div className="flex-1 mb-16">
 						<img src="/img/services/med.jpg" alt="" />
@@ -107,16 +107,10 @@ function Services(props) {
 							provide, they may be well-suited and built for a variety of
 							sectors, including automotive and aerospace.
 							<br />
-							<br />
-							The electronics and robotics sectors are also among our most
-							demanding. Omegaverse production has also grown into the medical,
-							dental, and educational industries, as well as the
-							energy-producing industries, which are always in need of
-							effective, long-lasting, and dependable mechanical parts.
 						</p>
 					</div>
 				</div>
-			</div>
+			</div> */}
 		</div>
 	);
 }
