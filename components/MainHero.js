@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap/dist/gsap";
 import Image from "next/image";
 import VideoScroll from "./VideoScroll";
@@ -36,7 +36,7 @@ function MainHero() {
 
 	return (
 		<>
-			<div className="">
+			<div className="relative">
 				<div className="hidden md:flex">
 					<VideoScroll />
 				</div>
@@ -46,25 +46,27 @@ function MainHero() {
 			</div>
 
 			<div
-				className="min-h-[100vh] bg-[#010101]  flex  justify-center items-center"
+				className="min-h-[100vh] bg-[#010101]  flex  justify-center items-center "
 				ref={heroSection2}
 			>
-				<div className="max-w-[80vw] flex flex-col-reverse md:flex-row items-center">
-					<div ref={heroText}>
-						<h1 className="heading  text-white w-full">
-							High Precision Engineering
-						</h1>
-						<p className="pText text-[#FF6600]">
-							Africa’s larges milling and 3D Printing machine
-						</p>
-					</div>
-					<div ref={transformer}>
-						<img
-							src="/img/home/OmegaCharacter.png"
-							alt="Twitter Button"
-							width={800}
-							height={1028}
-						/>
+				<div className="">
+					<div className="max-w-[80vw] flex flex-col-reverse md:flex-row items-center ">
+						<div ref={heroText}>
+							<h1 className="heading  text-white w-full ">
+								High Precision Engineering
+							</h1>
+							<p className="pText text-[#FF6600]">
+								Africa’s larges milling and 3D Printing machine
+							</p>
+						</div>
+						<div ref={transformer}>
+							<img
+								src="/img/home/OmegaCharacter.png"
+								alt="Twitter Button"
+								width={800}
+								height={1028}
+							/>
+						</div>
 					</div>
 				</div>
 			</div>

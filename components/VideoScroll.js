@@ -1,9 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { gsap } from "gsap/dist/gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 function VideoScroll() {
 	console.clear();
+
+	const [visible, setVisible] = useState(false);
+
+	useEffect(() => {
+		const showDiv = () => {
+			console.log(window.scrollY);
+			if (window.scrollY >= 2500) {
+				setVisible(true);
+			} else {
+				setVisible(false);
+			}
+		};
+
+		window.addEventListener("scroll", showDiv);
+	});
 
 	useEffect(() => {
 		/* The encoding is super important here to enable frame-by-frame scrubbing. */
@@ -83,11 +98,12 @@ function VideoScroll() {
 	return (
 		<>
 			<div>
+				<div className="fixed top-0 left-0 min-h-screen min-w-screen z-50"></div>
 				<video
 					src="/video/OMEGAVERSE.mp4"
 					preload="auto"
 					muted
-					className="video-background "
+					className={`video-background ${visible ? "hidden" : "flex"}`}
 				></video>
 				<div id="container"></div>
 			</div>
