@@ -103,6 +103,7 @@ function VideoScroll() {
 					src="/video/OMEGAVERSE.mp4"
 					preload="auto"
 					muted
+					autoPlay
 					className={`video-background ${visible ? "hidden" : "flex"}`}
 				></video>
 				<div id="container"></div>

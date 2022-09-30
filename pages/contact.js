@@ -69,9 +69,9 @@ function contact() {
 							We’d love to hear from you
 						</h1>
 						<h3 className="pText text-white mb-12 w-[100%] md:w-[50%]">
-							Home is where your wifi connects automatically. Here’s where ours
-							does. Give us a call—or better yet—drop into our headquarters to
-							say hi in person.
+							Your wifi connects automatically at home. This is where ours is.
+							Give us a call, or better yet, stop by our office to say hello in
+							person.
 						</h3>
 					</div>
 					<div className="w-full flex justify-center items-center">
@@ -89,7 +89,7 @@ function contact() {
 								<ul>
 									<div>
 										<h4 className="sHeading text-[#FF6600] mb-6">Cape Town</h4>
-										<div className="flex items-center">
+										<div className="flex items-center mb-4">
 											<span>
 												<div className="w-6 mr-2">
 													<MdEmail />
@@ -97,7 +97,7 @@ function contact() {
 											</span>
 											<span className="leading-16">info@o-megaverse.com</span>
 										</div>
-										<div className="flex items-center">
+										<div className="flex items-center mb-4">
 											<span>
 												<div className="w-6 mr-2">
 													<FiPhoneCall />
@@ -109,9 +109,13 @@ function contact() {
 											<span>
 												<div className="w-6 mr-2">
 													<ImLocation2 />
-												</div>{" "}
+												</div>
 											</span>
-											<span>Cape Town</span>
+											<ul>
+												<li>22 Cumberland</li>
+												<li>Paarden Eiland</li>
+												<li>Cape Town</li>
+											</ul>
 										</div>
 									</div>
 								</ul>
