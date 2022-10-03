@@ -19,12 +19,7 @@ function Navbar() {
 		<nav className="navbarBG navbg flex justify-between md:justify-around w-screen fixed pt-7 md:pt-14 pb-14 mb-10 px-[30px] md:px-[170px] z-50">
 			<Link href="./">
 				<div className="min-h-[40px]">
-					<Image
-						src="/omegaverse_logo.svg"
-						alt="Logo"
-						width={200}
-						height={40}
-					/>
+					<img src="/omegaverse_logo.svg" alt="Logo" width={200} height={40} />
 				</div>
 			</Link>
 			<ul className="hidden md:flex space-x-4 w-full justify-center text-white text-size-4">

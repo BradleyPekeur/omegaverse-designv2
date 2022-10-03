@@ -26,19 +26,19 @@ export default function Home() {
 				<MainHero />
 			</main>
 
-			<section className="flex w-screen justify-center min-h-[100vh] items-center bg-[#010101]">
+			<section className="flex w-screen justify-center min-h-auto md:min-h-[70vh] items-center bg-[#010101]">
 				<div className="flex flex-col md:flex-row max-w-[90vw] md:max-w-[80vw] h-full justify-center items-center">
-					<div className="flex-1">
+					{/* <div className="md:flex-1 hidden">
 						<Image
 							src="/img/home/Machine.png"
 							alt="Twitter Button"
 							width={800}
 							height={720}
 						/>
-					</div>
+					</div> */}
 					<div className="flex-1 justify-center items-center h-full relative">
-						<h1 className="text-[#FF6600] mb-8 sHeading">About Omega</h1>
-						<p className="text-white pText ">
+						<h1 className="text-[#FF6600] mb-8  sHeading">About Omega</h1>
+						<p className="text-white pText pb-8">
 							We are a large scale CNC & 3D printing, composites start up. We
 							manufacture tooling, models, prototypes and patterns for numerous
 							sectors. We support local initiatives that drive awareness and

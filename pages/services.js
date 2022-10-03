@@ -30,7 +30,7 @@ function Services(props) {
 	// });
 
 	return (
-		<div>
+		<div className="bg-[#010101]">
 			<div
 				className="py-14 min-h-screen w-full flex justify-center items-center bg-cover bg-no-repeat"
 				style={{ backgroundImage: "url(./img/services/services.png) " }}

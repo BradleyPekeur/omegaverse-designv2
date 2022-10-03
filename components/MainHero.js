@@ -61,7 +61,7 @@ function MainHero() {
 						</div>
 						<div ref={transformer}>
 							<img
-								src="/img/home/OmegaCharacter.png"
+								src="/img/home/Machine.png"
 								alt="Twitter Button"
 								width={800}
 								height={1028}
