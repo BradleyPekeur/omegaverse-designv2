@@ -41,7 +41,7 @@ function Services(props) {
 							<div className="flex-1 flex flex-col mb-16">
 								<h1 className="text-white heading">Services</h1>
 								<span className="text-[#FF6600] sHeading">
-									Industries we server
+									Industries we serve
 								</span>
 							</div>
 						</div>

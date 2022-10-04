@@ -10,7 +10,7 @@ function VideoScroll() {
 	useEffect(() => {
 		const showDiv = () => {
 			console.log(window.scrollY);
-			if (window.scrollY >= 2500) {
+			if (window.scrollY >= 1000) {
 				setVisible(true);
 			} else {
 				setVisible(false);

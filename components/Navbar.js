@@ -39,9 +39,14 @@ function Navbar() {
 					<Link href="./contact">Contact Us</Link>
 				</li>
 			</ul>
-			<button className="bg-[#FF6600]  px-1 rounded-full w-[200px] hidden  justify-center items-center">
-				Store
-			</button>
+			<a
+				href="https://form.asana.com/?k=XadmS3lTRA-KFCsdbp676w&d=1200250413180775"
+				target="_blank"
+			>
+				<button className="bg-[#FF6600]  px-1 rounded-full w-[200px] justify-center items-center">
+					Request an Quote
+				</button>
+			</a>
 			<div onClick={handleNav} className="block md:hidden z-50">
 				{nav ? (
 					<GiSplitCross size={20} style={{ color: "white" }} />
