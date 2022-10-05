@@ -62,7 +62,7 @@ function contact() {
 					</div>
 				</div>
 			</div> */}
-			<div className="max-w-[90vw] md:max-w-[80vw] py-36">
+			<div className="max-w-[90vw] md:max-w-[80vw] py-16">
 				<div className="cards_container ">
 					<div className="pt-24 text-center flex justify-center flex-col items-center">
 						<h1 className="sHeading text-[#FF6600] mb-6">
@@ -78,7 +78,7 @@ function contact() {
 						<div className="w-[100%] md:w-[80%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-white justify-center">
 							<div className="border border-[#FF6600] flex flex-col items-center justify-center p-5">
 								<iframe
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.9814953690116!2d18.46676659236328!3d-33.91587582648652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5db107ede329%3A0x725a98b38f3980cb!2s22%20Cumberland%20Rd%2C%20Paarden%20Eiland%2C%20Cape%20Town%2C%207405!5e0!3m2!1sen!2sza!4v1663664152861!5m2!1sen!2sza"
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1655.4741881709986!2d18.465759558223834!3d-33.91672819516068!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x56744ff8be2eeb81!2sOmegaverse!5e0!3m2!1sen!2sza!4v1664978246940!5m2!1sen!2sza"
 									style={{ height: "100%", width: "100%" }}
 									loading="lazy"
 								></iframe>

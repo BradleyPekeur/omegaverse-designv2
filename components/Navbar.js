@@ -42,8 +42,9 @@ function Navbar() {
 			<a
 				href="https://form.asana.com/?k=XadmS3lTRA-KFCsdbp676w&d=1200250413180775"
 				target="_blank"
+				className="hidden md:flex"
 			>
-				<button className="bg-[#FF6600]  px-1 rounded-full w-[200px] justify-center items-center">
+				<button className="bg-[#FF6600] text-white px-1 py-1 rounded-full w-[200px] justify-center items-center">
 					Request an Quote
 				</button>
 			</a>
@@ -94,6 +95,14 @@ function Navbar() {
 						<span onClick={closeNav}>Contact Us</span>
 					</Link>
 				</li>
+				<a
+					href="https://form.asana.com/?k=XadmS3lTRA-KFCsdbp676w&d=1200250413180775"
+					target="_blank"
+				>
+					<button className="bg-[#FF6600] text-white px-1 py-1 rounded-full w-[200px] justify-center items-center ">
+						Request an Quote
+					</button>
+				</a>
 			</ul>
 		</nav>
 	);

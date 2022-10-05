@@ -106,8 +106,8 @@ export default function Home() {
 							</li>
 						</ul>
 					</div>
-					<div className="w-full flex-1 bg-orange-500">
-						<img src="/img/home/Picture2.jpg" alt="Main Pic" />
+					<div className="w-full flex-1">
+						<img src="/img/home/dyno.png" alt="Main Pic" />
 					</div>
 				</div>
 			</section>

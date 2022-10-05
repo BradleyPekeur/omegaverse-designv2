@@ -7,14 +7,14 @@ function HorizontalScroller() {
 	const [contentDesc, setContentDesc] = useState(
 		"We are a large scale CNC & 3D printing, composites start up. We manufacture tooling, models, prototypes and patterns for numerous sectors."
 	);
-	const [contentImg, setContentImg] = useState("/img/home/Picture3.jpg");
+	const [contentImg, setContentImg] = useState("/img/home/Picture3A.jpg");
 
 	function rapidClick() {
 		setContentTitle("Rapid Prototyping");
 		setContentDesc(
 			"We are a large scale CNC & 3D printing, composites start up. We manufacture tooling, models, prototypes and patterns for numerous sectors."
 		);
-		setContentImg("/img/home/Picture3.jpg");
+		setContentImg("/img/home/Picture3A.jpg");
 	}
 
 	function toolingClick() {
@@ -22,7 +22,7 @@ function HorizontalScroller() {
 		setContentDesc(
 			"Utilize 3D printed tooling in conjunction with traditional manufacturing processes to accelerate product development, iterate quickly, and reduce costs."
 		);
-		setContentImg("/img/home/fworld.jpg");
+		setContentImg("/img/home/tooling.jpg");
 	}
 
 	function modelsClick() {
@@ -30,7 +30,7 @@ function HorizontalScroller() {
 		setContentDesc(
 			"For a wide range of industries and use cases, create high-resolution, accurate models with fine details and a smooth surface finish."
 		);
-		setContentImg("/img/home/Picture2.jpg");
+		setContentImg("/img/home/3dmodels.jpg");
 	}
 
 	useEffect(() => {
@@ -137,17 +137,26 @@ function HorizontalScroller() {
 						{/* ---------------------End First Div */}
 						<div className="section section-amin section-gray">
 							<div>
-								<h2 className="sHeading">
-									Lets create something{" "}
-									<span className="text-[#FF6600]">together</span>
-								</h2>
+								<div className="mb-20">
+									<h2 className="superHeading mb-[-50px]">WE CAN.</h2>
+									<h3 className="text-[#FF6600] lightHeading ">just imagine</h3>
+								</div>
+
 								<div className="flex gap-4 justify-center items-center">
 									{/* <button className="bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
 										Visit Store
 									</button> */}
 									<a href="mailto:info@o-megaverse.com">
-										<button className="bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+										<button className="bg-[#FF6600] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
 											Get in touch
+										</button>
+									</a>
+									<a
+										href="https://form.asana.com/?k=XadmS3lTRA-KFCsdbp676w&d=1200250413180775"
+										target="_blank"
+									>
+										<button className="bg-[#FF6600] text-white py-2 px-4 rounded justify-center items-center">
+											Request an Quote
 										</button>
 									</a>
 								</div>
