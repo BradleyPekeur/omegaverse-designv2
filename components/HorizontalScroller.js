@@ -138,7 +138,9 @@ function HorizontalScroller() {
 						<div className="section section-amin section-gray">
 							<div>
 								<div className="mb-20">
-									<h2 className="superHeading mb-[-50px]">WE CAN.</h2>
+									<h2 className="superHeading mb-[-15px] md:mb-[-30px] lg:mb-[-50px]">
+										WE CAN.
+									</h2>
 									<h3 className="text-[#FF6600] lightHeading ">just imagine</h3>
 								</div>
 

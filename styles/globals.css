@@ -61,7 +61,7 @@ body {
 }
 
 .superHeading{
-  font-size: clamp(1.25rem, 0.9643rem + 5vw, 8rem);
+  font-size: clamp(4rem, 3rem + 5vw, 8rem);
   font-weight: bold;
   text-shadow: 2px 2px #032947;
 
