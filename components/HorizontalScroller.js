@@ -154,6 +154,7 @@ function HorizontalScroller() {
 									<a
 										href="https://form.asana.com/?k=XadmS3lTRA-KFCsdbp676w&d=1200250413180775"
 										target="_blank"
+										rel="noreferrer"
 									>
 										<button className="bg-[#FF6600] text-white py-2 px-4 rounded justify-center items-center">
 											Request an Quote
