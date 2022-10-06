@@ -140,7 +140,7 @@ export default function Home() {
 			</section>
 
 			<section
-				className="flex w-full justify-center bg-no-repeat min-h-[100vh] items-center bg-cover bg-center relative "
+				className="flex w-full justify-center bg-no-repeat min-h-[100vh] items-center bg-cover bg-center relative overflow-hidden"
 				id="industriesContainer"
 			>
 				<div className="h-full max-w-[90vw] md:max-w-[80vw] flex flex-col md:flex-row gap-10">

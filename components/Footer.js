@@ -40,14 +40,14 @@ function Footer() {
 
 				<div>
 					<div className="flex">
-						<div className="w-6">
+						{/* <div className="w-6">
 							<img
 								src="/img/social/Facebook.svg"
 								alt="Facebook Button"
 								width={45}
 								height={45}
 							/>
-						</div>
+						</div> */}
 						{/* <div className="w-6">
 							<img
 								src="/img/social/Twitter.svg"
