@@ -69,7 +69,7 @@ function Services(props) {
 											<GiCutDiamond size={50} color="white" className="mb-10" />
 										}
 										title="Mega CNC Milling"
-										description="Multi axis composites machining printing and typesetting industry. "
+										description="3 axis to multi axis composites machining."
 										textColor="white"
 									/>
 								</div>

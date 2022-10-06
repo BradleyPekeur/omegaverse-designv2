@@ -12,7 +12,81 @@ import { FaCar, FaHandHoldingMedical } from "react-icons/fa";
 import { BsCameraReelsFill } from "react-icons/bs";
 import { RiBuilding2Fill } from "react-icons/ri";
 
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { useEffect, useRef } from "react";
+
 export default function Home() {
+	const aboutheadingRef = useRef(null);
+	const aboutHeadingTrigger = useRef(null);
+
+	// useEffect(() => {
+	// 	gsap.to(aboutheadingRef.current, {
+	// 		x: 500,
+	// 		duration: 2,
+	// 		ease: "bounce",
+	// 		scrollTrigger: {
+	// 			trigger: aboutHeadingTrigger,
+	// 			markers: true,
+	// 			start: "top center",
+	// 		},
+	// 	});
+	// }, []);
+
+	gsap.registerPlugin(ScrollTrigger);
+	const aboutheader = useRef(null);
+	const aboutDesc = useRef(null);
+	const dynoPic = useRef(null);
+	const industriesCardsContainer = useRef(null);
+
+	useEffect(() => {
+		gsap.to("#aboutheader", {
+			x: 0,
+			duration: 0.75,
+			ease: "ease-in",
+			scrollTrigger: {
+				trigger: "#aboutContainer",
+				start: "top center",
+				end: "bottom top",
+				toggleActions: "play none none reset",
+			},
+		});
+
+		gsap.to(aboutDesc.current, {
+			opacity: 1,
+			duration: 0.75,
+			scrollTrigger: {
+				trigger: "#aboutContainer",
+				start: "top center",
+				end: "bottom top",
+				toggleActions: "play none none reset",
+			},
+		});
+
+		gsap.to(dynoPic.current, {
+			scale: 1,
+			duration: 0.75,
+			scrollTrigger: {
+				trigger: "#industriesContainer",
+				start: "top center",
+				end: "bottom top",
+				toggleActions: "play none none reset",
+			},
+		});
+
+		gsap.to(industriesCardsContainer.current, {
+			x: 0,
+			duration: 0.75,
+
+			scrollTrigger: {
+				trigger: "#industriesContainer",
+				start: "top center",
+				end: "bottom top",
+				toggleActions: "play none none reset",
+			},
+		});
+	}, []);
+
 	return (
 		<div className="bg-[#010101]">
 			<Head>
@@ -36,24 +110,46 @@ export default function Home() {
 							height={720}
 						/>
 					</div> */}
-					<div className="flex-1 justify-center items-center h-full relative">
-						<h1 className="text-[#FF6600] mb-8  sHeading">About Omega</h1>
-						<p className="text-white pText pb-8">
-							We are a large scale CNC & 3D printing, composites start up. We
-							manufacture tooling, models, prototypes and patterns for numerous
-							sectors. We support local initiatives that drive awareness and
-							create innovation through re-purposing waste. We are passionate
-							about sustainability, our economy and competitiveness as a country
-						</p>
+					<div
+						className="flex-1 justify-center items-center h-full relative "
+						id="aboutContainer"
+					>
+						<div className="md:w-[70%] w-full">
+							<h1
+								className="text-[#FF6600] mb-8 translate-x-[-600px]  sHeading"
+								id="aboutheader"
+								ref={aboutheader}
+							>
+								About Omega
+							</h1>
+							<p
+								className="text-white pText pb-8 opacity-0"
+								ref={aboutDesc}
+								id="#aboutDesc"
+							>
+								We are a large scale CNC & 3D printing, composites start up. We
+								manufacture tooling, models, prototypes and patterns for
+								numerous sectors. We support local initiatives that drive
+								awareness and create innovation through re-purposing waste. We
+								are passionate about sustainability, our economy and
+								competitiveness as a country
+							</p>
+						</div>
 					</div>
 				</div>
 			</section>
 
-			<section className="flex w-full justify-center bg-no-repeat min-h-[100vh] items-center bg-cover bg-center relative ">
+			<section
+				className="flex w-full justify-center bg-no-repeat min-h-[100vh] items-center bg-cover bg-center relative "
+				id="industriesContainer"
+			>
 				<div className="h-full max-w-[90vw] md:max-w-[80vw] flex flex-col md:flex-row gap-10">
 					<div className="text-white flex-1">
 						<h1 className="sHeading mb-16">Industries We Serve</h1>
-						<div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4">
+						<div
+							className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 translate-x-[600px]"
+							ref={industriesCardsContainer}
+						>
 							<div className="border border-[#FF6600] flex flex-col items-center justify-center p-5">
 								<GiSubmarine size={50} className="p-1 mb-2" />
 								<span className="pText mr-4 text-[#FF6600]">Marine</span>
@@ -107,7 +203,12 @@ export default function Home() {
 						</ul>
 					</div>
 					<div className="w-full flex-1">
-						<img src="/img/home/dyno.png" alt="Main Pic" />
+						<img
+							src="/img/home/dyno.png"
+							alt="Main Pic"
+							ref={dynoPic}
+							className="scale-[3]"
+						/>
 					</div>
 				</div>
 			</section>
