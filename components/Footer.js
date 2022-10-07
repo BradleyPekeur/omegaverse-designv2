@@ -24,7 +24,7 @@ function Footer() {
 						<span>
 							<div className="w-6 mr-2">
 								<FiPhoneCall />
-							</div>{" "}
+							</div>
 						</span>
 						<span className="pText">+27 87 820 8800</span>
 					</div>

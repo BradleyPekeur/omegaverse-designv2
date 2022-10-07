@@ -3,9 +3,11 @@ import { gsap } from "gsap/dist/gsap";
 import Image from "next/image";
 import VideoScroll from "./VideoScroll";
 import MobileVideoScroll from "./MobileVideoScroll";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 function MainHero() {
-	const heroSection = useRef(null);
+	gsap.registerPlugin(ScrollTrigger);
+	const mainHeroContainer = useRef(null);
 	const heroSection2 = useRef(null);
 	const heroText = useRef(null);
 	const videoIntro = useRef(null);
@@ -21,7 +23,7 @@ function MainHero() {
 			scrollTrigger: {
 				trigger: "#mainHeroContainer",
 				start: "top center",
-				end: "bottom top",
+				end: "bottom center",
 				toggleActions: "play none none reset",
 			},
 		});
@@ -50,7 +52,7 @@ function MainHero() {
 				</div> */}
 			</div>
 
-			<div
+			{/* <div
 				className="min-h-[100vh] bg-[#010101]  flex  justify-center items-center "
 				ref={heroSection2}
 			>
@@ -76,7 +78,7 @@ function MainHero() {
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> */}
 		</>
 	);
 }
