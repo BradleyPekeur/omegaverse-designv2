@@ -16,13 +16,13 @@ function Navbar() {
 	};
 
 	return (
-		<nav className="navbarBG navbg flex justify-between md:justify-around w-screen fixed pt-7 md:pt-14 pb-14 mb-10 px-[30px] md:px-[170px] z-[99]">
+		<nav className="navbarBG navbg flex justify-between items-center h-[100px] md:justify-around w-screen fixed  md: mb-10 px-[30px] md:px-[170px] z-[99]">
 			<Link href="./">
 				<div className="min-h-[40px]">
-					<img src="/omegaverse_logo.svg" alt="Logo" width={200} height={40} />
+					<img src="/omegaverse-logo.png" alt="Logo" width={200} height={40} />
 				</div>
 			</Link>
-			<ul className="hidden md:flex space-x-4 w-full justify-center text-white text-size-4">
+			<ul className="hidden md:flex space-x-4 w-full justify-center text-[#333333] text-size-4">
 				<li>
 					<Link href="./">Home</Link>
 				</li>
