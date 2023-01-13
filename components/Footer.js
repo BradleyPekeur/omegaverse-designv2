@@ -9,8 +9,8 @@ import { ImLocation2 } from "react-icons/im";
 function Footer() {
 	return (
 		<div className="bg-[#010101] min-h-[545px] w-[100vw] flex justify-center items-center border-t-[0.5px] border-indigo-500 relative">
-			<div className="text-white w-full  flex justify-between md:max-w-[80vw] p-4">
-				<div>
+			<div className="text-white w-full  flex justify-between md:max-w-[80vw] p-4 flex-col md:flex-row">
+				<div className="text-size-4 mb-8">
 					<h4 className="sHeading text-[#FF6600] mb-6">Get in touch</h4>
 					<div className="flex items-center">
 						<span>
@@ -18,7 +18,7 @@ function Footer() {
 								<MdEmail />
 							</div>
 						</span>
-						<span className="pText leading-16">info@o-megaverse.com</span>
+						<span className=" leading-16">info@o-megaverse.com</span>
 					</div>
 					<div className="flex items-center">
 						<span>
@@ -26,7 +26,7 @@ function Footer() {
 								<FiPhoneCall />
 							</div>
 						</span>
-						<span className="pText">+27 87 820 8800</span>
+						<span className="text-size-4">+27 87 820 8800</span>
 					</div>
 					<div className="flex items-center">
 						<span>
@@ -34,7 +34,7 @@ function Footer() {
 								<ImLocation2 />
 							</div>
 						</span>
-						<span className="pText">Cape Town</span>
+						<span className="text-size-4">Cape Town</span>
 					</div>
 				</div>
 
@@ -76,7 +76,7 @@ function Footer() {
 
 					<Link href="./">
 						<div className="min-h-[40px] w-40 pr-4">
-							<Image
+							<img
 								src="/omegaverse_logo.svg"
 								alt="Logo"
 								width={200}

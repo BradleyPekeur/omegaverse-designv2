@@ -57,170 +57,115 @@ export default function Home() {
 		setContentImg("/img/home/3dmodels.jpg");
 	}
 
-	useEffect(() => {
-		const horizontalSections = gsap.utils.toArray(".horizontal-sections");
-
-		horizontalSections.forEach((section, i) => {
-			const thisPinWrap = section.querySelector(".pin-wrap");
-			const thisAnimWrap = thisPinWrap.querySelector(".animation-wrap");
-
-			const getToValue = () => -(thisAnimWrap.scrollWidth - window.innerWidth);
-
-			ScrollTrigger.create({
-				trigger: section,
-				start: "top top",
-				end: () => "+=" + thisAnimWrap.scrollWidth,
-				pin: thisPinWrap,
-				invalidateOnRefresh: true,
-				scrub: true,
-			});
-
-			const fakeHorizontalAnim = gsap.fromTo(
-				thisAnimWrap,
-				{
-					x: () =>
-						thisAnimWrap.classList.contains("to-right") ? 0 : getToValue(),
-				},
-				{
-					x: () =>
-						thisAnimWrap.classList.contains("to-right") ? getToValue() : 0,
-					ease: "none",
-					scrollTrigger: {
-						trigger: section,
-						start: "top top",
-						end: () => "+=" + (thisAnimWrap.scrollWidth - window.innerWidth),
-						invalidateOnRefresh: true,
-						scrub: true,
-					},
-				}
-			);
-
-			const tl = gsap.timeline();
-			tl.to(".block-anim", {
-				duration: 1,
-				ease: "power3",
-				clipPath: "inset(50% 50% 50% 50% round 25vw 25vw 25.01vw 25.01vw)",
-			});
-
-			ScrollTrigger.create({
-				trigger: section,
-				start: () =>
-					"top top-=" + (thisAnimWrap.scrollWidth - window.innerWidth),
-				end: () => "+=" + window.innerWidth,
-				animation: tl,
-				scrub: true,
-				markers: false,
-			});
-		});
-	}, []);
-
-	// useEffect(() => {
-	// 	gsap.to(aboutheadingRef.current, {
-	// 		x: 500,
-	// 		duration: 2,
-	// 		ease: "bounce",
-	// 		scrollTrigger: {
-	// 			trigger: aboutHeadingTrigger,
-	// 			markers: true,
-	// 			start: "top center",
-	// 		},
-	// 	});
-	// }, []);
-
 	gsap.registerPlugin(ScrollTrigger);
-	const aboutheader = useRef(null);
-	const aboutDesc = useRef(null);
+	const aboutHeading = useRef(null);
+	const aboutDescription = useRef(null);
 	const dynoPic = useRef(null);
 	const industriesCardsContainer = useRef(null);
+	const slide1 = useRef(null);
+	const slide2 = useRef(null);
+	const slide3 = useRef(null);
 
 	useEffect(() => {
-		gsap.to(heroText.current, {
-			x: 0,
-			scale: 1,
-			duration: 0.75,
+		const tlHeroSection = gsap.timeline({
 			scrollTrigger: {
-				trigger: "#mainHeroContainer",
-				start: "top 80%",
-				end: "bottom center",
-				toggleActions: "play none none reset",
-				preventOverlaps: true,
-				fastScrollEnd: true,
+				trigger: "#mainHeroContainerSection",
+				start: "-5%",
+				end: "5%",
+				scrub: 4,
+				pin: true,
+				pinSpacing: true,
 			},
 		});
 
-		gsap.to(machinePic.current, {
-			x: 0,
-			scale: 1,
-			duration: 2,
+		tlHeroSection.fromTo(
+			heroText.current,
+			{ opacity: 0, x: "-100%" },
+			{ opacity: 1, x: 0 }
+		);
+		tlHeroSection.fromTo(
+			machinePic.current,
+			{ opacity: 0, scale: 3 },
+			{ opacity: 1, scale: 1, duration: 2 }
+		);
+
+		const tlAboutSection = gsap.timeline({
 			scrollTrigger: {
-				trigger: "#mainHeroContainer",
-				start: "top 80%",
-				end: "bottom center",
-				toggleActions: "play none none reset",
-				preventOverlaps: true,
-				fastScrollEnd: true,
+				trigger: "#aboutContainerSection",
+				start: "0%",
+				end: "60%",
+				scrub: true,
+				pin: true,
+				pinSpacing: true,
 			},
 		});
 
-		gsap.to("#aboutheader", {
-			x: 0,
-			duration: 0.75,
-			ease: "ease-in",
-			scrollTrigger: {
-				trigger: "#aboutContainer",
+		tlAboutSection.fromTo(
+			aboutHeading.current,
+			{ opacity: 0, x: "-100%" },
+			{ opacity: 1, x: 0 }
+		);
+		tlAboutSection.fromTo(
+			aboutDescription.current,
+			{ opacity: 0, scale: 3 },
+			{ opacity: 1, scale: 1, duration: 2 }
+		);
 
-				start: "top center",
-				end: "bottom top",
-				toggleActions: "play none none reset",
-				preventOverlaps: true,
-				fastScrollEnd: true,
-			},
-		});
-
-		gsap.to(aboutDesc.current, {
-			opacity: 1,
-			duration: 0.75,
-			scrollTrigger: {
-				trigger: "#aboutContainer",
-				start: "top center",
-				end: "bottom top",
-				toggleActions: "play none none reset",
-				preventOverlaps: true,
-				fastScrollEnd: true,
-			},
-		});
-
-		gsap.to(dynoPic.current, {
-			scale: 1,
-			duration: 0.75,
+		const tlindustriesSection = gsap.timeline({
 			scrollTrigger: {
 				trigger: "#industriesContainer",
-				start: "top center",
-				end: "bottom top",
-				toggleActions: "play none none reset",
-				preventOverlaps: true,
-				fastScrollEnd: true,
+				start: "-15%",
+				end: "60%",
+				scrub: true,
+				pin: true,
+				pinSpacing: true,
+				markers: false,
 			},
 		});
 
-		gsap.to(industriesCardsContainer.current, {
-			x: 0,
-			duration: 2,
+		tlindustriesSection.fromTo(
+			industriesCardsContainer.current,
+			{ opacity: 0, x: "-100%" },
+			{ opacity: 1, x: 0 }
+		);
+		tlindustriesSection.fromTo(
+			dynoPic.current,
+			{ scale: 3 },
+			{ scale: 1, duration: 2 },
+			"<"
+		);
 
+		// =====================Horizontal Scroll=============================
+		const HorizontalScrollSection = gsap.timeline({
 			scrollTrigger: {
-				trigger: "#industriesContainer",
-				start: "top center",
-				end: "bottom top",
-				toggleActions: "play none none reset",
-				preventOverlaps: true,
-				fastScrollEnd: true,
+				trigger: "#HorizontalScrollContainer",
+				start: "0%",
+				end: "300%",
+				scrub: true,
+				pin: true,
+				pinSpacing: true,
 			},
 		});
+		HorizontalScrollSection.fromTo(
+			slide1.current,
+			{ opacity: 0, scale: 1.2 },
+			{ opacity: 1, scale: 1 }
+		);
+
+		HorizontalScrollSection.fromTo(
+			slide1.current,
+			{ opacity: 1 },
+			{ opacity: 0 }
+		);
+		HorizontalScrollSection.fromTo(
+			slide2.current,
+			{ left: "110vw" },
+			{ left: 0 }
+		);
 	}, []);
 
 	return (
 		<>
-			{" "}
 			<Head>
 				<title>Omegaverse</title>
 				<meta name="description" content="Generated by create next app" />
@@ -230,13 +175,17 @@ export default function Home() {
 				<main className="overflow-hidden">
 					<SideSocialBar />
 					<MainHero />
+				</main>
+
+				<section>
 					<div
-						className="min-h-[100vh] bg-[#010101]  flex  justify-center items-center overflow-hidden"
+						className="min-h-screen bg-[#010101]  flex  justify-center items-center overflow-hidden"
 						ref={heroSection2}
+						id="mainHeroContainerSection"
 					>
 						<div className="" id="mainHeroContainer">
 							<div className="max-w-[80vw] flex flex-col-reverse md:flex-row items-center ">
-								<div ref={heroText} className="translate-x-[-1200px]">
+								<div ref={heroText} className="">
 									<h1 className="heading  text-white w-full ">
 										High Precision Engineering
 									</h1>
@@ -251,42 +200,31 @@ export default function Home() {
 										width={800}
 										height={1028}
 										ref={machinePic}
-										className="scale-[3]"
 									/>
 								</div>
 							</div>
 						</div>
 					</div>
-				</main>
+				</section>
 
-				<section className="flex  justify-center min-h-auto md:min-h-[70vh] items-center bg-[#010101]">
-					<div className="flex flex-col md:flex-row max-w-[80vw] md:max-w-[70vw] h-full justify-center items-center">
-						<div
-							className="justify-center items-center h-full"
-							id="aboutContainer"
+				<section
+					className="bg-[#010101] flex justify-center items-center min-h-screen overflow-hidden"
+					id="aboutContainerSection"
+				>
+					<div className="md:w-[70%] w-full px-5">
+						<h1 className="text-[#FF6600]  sHeading mb-8" ref={aboutHeading}>
+							About Omega
+						</h1>
+						<p
+							className="text-white pText md:w-1/2 w-full"
+							ref={aboutDescription}
 						>
-							<div className="md:w-[70%] w-full">
-								<h1
-									className="text-[#FF6600] mb-8 translate-x-[-600px]  sHeading"
-									id="aboutheader"
-									ref={aboutheader}
-								>
-									About Omega
-								</h1>
-								<p
-									className="text-white pText pb-8 opacity-0"
-									ref={aboutDesc}
-									id="#aboutDesc"
-								>
-									We are a large scale CNC & 3D printing, composites start up.
-									We manufacture tooling, models, prototypes and patterns for
-									numerous sectors. We support local initiatives that drive
-									awareness and create innovation through re-purposing waste. We
-									are passionate about sustainability, our economy and
-									competitiveness as a country
-								</p>
-							</div>
-						</div>
+							We are a large scale CNC & 3D printing, composites start up. We
+							manufacture tooling, models, prototypes and patterns for numerous
+							sectors. We support local initiatives that drive awareness and
+							create innovation through re-purposing waste. We are passionate
+							about sustainability, our economy and competitiveness as a country
+						</p>
 					</div>
 				</section>
 
@@ -295,209 +233,219 @@ export default function Home() {
 				overflow-hidden"
 					id="industriesContainer"
 				>
-					<div className="h-full max-w-[90vw] md:max-w-[80vw] flex flex-col md:flex-row gap-10 ">
+					<div className="h-full max-w-[90vw] md:max-w-[80vw] flex flex-col md:flex-row gap-10 justify-center items-center">
 						<div className="text-white flex-1">
 							<h1 className="sHeading mb-16">Industries We Serve</h1>
 							<div
-								className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 translate-x-[600px]"
+								className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4"
 								ref={industriesCardsContainer}
 							>
-								<div className="border border-[#FF6600] flex flex-col items-center justify-center p-5">
-									<GiSubmarine size={50} className="p-1 mb-2" />
+								<div className="border border-[#FF6600] flex flex-col items-center justify-center ">
+									<GiSubmarine size={40} className="p-1 mb-2" />
 									<span className="pText mr-4 text-[#FF6600]">Marine</span>
 								</div>
-								<div className="border border-[#FF6600] flex flex-col items-center justify-center p-5">
-									<BsCameraReelsFill size={50} className="p-1 mb-2" />
+								<div className="border border-[#FF6600] flex flex-col items-center justify-center md:p-5 p-1">
+									<BsCameraReelsFill size={40} className="p-1 mb-2" />
 									<span className="pText mr-4 text-[#FF6600]">Film</span>
 								</div>
-								<div className="border border-[#FF6600] flex flex-col items-center justify-center p-5">
-									<FaCar size={50} className="p-1 mb-2" />
+								<div className="border border-[#FF6600] flex flex-col items-center justify-center md:p-5 p-1">
+									<FaCar size={40} className="p-1 mb-2" />
 									<span className="pText mr-4 text-[#FF6600]">Automotive</span>
 								</div>
-								{/* <div className="border border-[#FF6600] flex flex-col items-center justify-center p-5">
-								<FaHandHoldingMedical size={50} className="p-1 mb-2" />
-								<span className="pText mr-4 text-[#FF6600]">Medical</span>
-							</div> */}
-								<div className="border border-[#FF6600] flex flex-col items-center justify-center p-5">
-									<ImAirplane size={50} className="p-1 mb-2" />
+								<div className="border border-[#FF6600] flex flex-col items-center justify-center md:p-5 p-1">
+									<ImAirplane size={40} className="p-1 mb-2" />
 									<span className="pText mr-4 text-[#FF6600]">Aerospace</span>
 								</div>
-								<div className="border border-[#FF6600] flex flex-col items-center justify-center p-5">
-									<GiMeepleArmy size={50} className="p-1 mb-2" />
+								<div className="border border-[#FF6600] flex flex-col items-center justify-center md:p-5 p-1">
+									<GiMeepleArmy size={40} className="p-1 mb-2" />
 									<span className="pText mr-4 text-[#FF6600]">Military</span>
 								</div>
-								{/* <div className="border border-[#FF6600] flex flex-col items-center justify-center p-5">
-								<GiElectric size={50} className="p-1 mb-2" />
-								<span className="pText mr-4 text-[#FF6600]">Electronics</span>
-							</div> */}
-								<div className="border border-[#FF6600] flex flex-col items-center justify-center p-5">
-									<RiBuilding2Fill size={50} className="p-1 mb-2" />
+								<div className="border border-[#FF6600] flex flex-col items-center justify-center md:p-5 p-1">
+									<RiBuilding2Fill size={40} className="p-1 mb-2" />
 									<span className="pText mr-4 text-[#FF6600]">
 										Architectural
 									</span>
 								</div>
 							</div>
-							<ul className="">
-								<li></li>
-								<li>
-									<span className="pText mr-4 text-[#FF6600]"></span>
-								</li>
-								<li>
-									<span className="pText mr-4 text-[#FF6600]"></span>
-								</li>
-								<li>
-									<span className="pText mr-4 text-[#FF6600]"></span>
-								</li>
-								<li>
-									<span className="pText mr-4 text-[#FF6600]"></span>
-								</li>
-								<li>
-									<span className="pText mr-4 text-[#FF6600]"></span>
-								</li>
-							</ul>
 						</div>
 						<div className="w-full flex-1">
 							<img
 								src="/img/home/dyno.png"
 								alt="Main Pic"
 								ref={dynoPic}
-								className="scale-[3]"
+								className=""
 							/>
 						</div>
 					</div>
 				</section>
 
-				<section className="relative">
-					{/* <HorizontalScroller /> */}
-					<div className=" text-white min-h-[550vh]">
-						<div className="spacer"></div>
-
-						<div className="horizontal-sections">
-							<div className="pin-wrap">
-								<div className="animation-wrap to-right">
-									{/* ---------------------First Div */}
-									<div
-										className="section bg-cover bg-no-repeat flex items-center justify-center"
-										// style={{backgroundImage:"url(./img/home/Header-yacht-1.jpg) "}}
-									>
-										<div className="flex flex-col md:flex-row max-w-[90vw] md:max-w-[80vw] gap-8 overflow-hidden">
-											<div className="flex-1">
-												<img src={contentImg} alt="Main Pic" />
-											</div>
-											<div className="flex-1">
-												<h2 className="sHeading text-[#FF6600] mb-8">
-													{contentTitle}
-												</h2>
-												<p className="text-white pText mb-8">{contentDesc}</p>
-												<div className="flex gap-4 ">
-													<button
-														className="border border-[#FF6600] hover:bg-blue-700 text-white font-bold py-2 px-1 md:px-4 rounded"
-														onClick={rapidClick}
-													>
-														Rapid Prototyping
-													</button>
-													<button
-														className="bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-														onClick={toolingClick}
-													>
-														Tooling
-													</button>
-													<button
-														className="bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-														onClick={modelsClick}
-													>
-														Models and Props
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									{/* ---------------------End First Div */}
-									<div className="section section-amin section-gray overflow-hidden">
-										<div>
-											<div className="mb-20">
-												<h2 className="superHeading mb-[-15px] md:mb-[-30px] lg:mb-[-50px]">
-													WE CAN.
-												</h2>
-												<h3 className="text-[#FF6600] lightHeading ">
-													just imagine
-												</h3>
-											</div>
-
-											<div className="flex gap-4 justify-center items-center">
-												{/* <button className="bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-										Visit Store
-									</button> */}
-												<a href="mailto:info@o-megaverse.com">
-													<button className="bg-[#FF6600] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-														Get in touch
-													</button>
-												</a>
-												<a
-													href="https://form.asana.com/?k=XadmS3lTRA-KFCsdbp676w&d=1200250413180775"
-													target="_blank"
-													rel="noreferrer"
-												>
-													<button className="bg-[#FF6600] text-white py-2 px-4 rounded justify-center items-center">
-														Request an Quote
-													</button>
-												</a>
-											</div>
-										</div>
-
-										<div
-											className="block-anim yellow flex justify-center items-center"
-											// style={{backgroundImage:"url(./img/home/fworld.jpg) "}}
+				<section id="HorizontalScrollContainer" className="overflow-hidden">
+					<div className="relative">
+						{/* Div 1 */}
+						<div
+							className="section bg-cover bg-no-repeat flex items-center justify-center"
+							ref={slide1}
+						>
+							<div className="flex flex-col md:flex-row max-w-[90vw] md:max-w-[80vw] gap-8 overflow-hidden">
+								<div className="flex-1">
+									<img src={contentImg} alt="Main Pic" />
+								</div>
+								<div className="flex-1">
+									<h2 className="sHeading text-[#FF6600] mb-8">
+										{contentTitle}
+									</h2>
+									<p className="text-white pText mb-8">{contentDesc}</p>
+									<div className="flex gap-4 ">
+										<button
+											className="border border-[#FF6600] hover:bg-blue-700 text-white text-sm py-2 px-3 md:px-4 rounded"
+											onClick={rapidClick}
 										>
-											<div className="flex flex-col md:flex-row max-w-[90vw] md:max-w-[80vw] md:items-center gap-8">
-												<div className="w-full flex-1 bg-orange-500">
-													<img src="/img/home/Picture1.jpg" alt="Main Pic" />
+											Rapid Prototyping
+										</button>
+										<button
+											className="bg-orange-500 hover:bg-blue-700 text-white text-sm py-2 px-3 rounded"
+											onClick={toolingClick}
+										>
+											Tooling
+										</button>
+										<button
+											className="bg-orange-500 hover:bg-blue-700 text-white text-sm py-2 px-3 rounded"
+											onClick={modelsClick}
+										>
+											Models and Props
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+						{/* End Div 1 */}
+						{/* Start Div 2 */}
+						<div className="w-full h-full absolute top-0 left-0" ref={slide2}>
+							<div className="block-anim yellow flex justify-center items-center ">
+								<div className="flex flex-col md:flex-row max-w-[90vw] md:max-w-[80vw] md:items-center gap-8">
+									<div className="w-full flex-1 bg-orange-500">
+										<img src="/img/home/Picture1.jpg" alt="Main Pic" />
+									</div>
+									<div className="flex-1 pl-4">
+										<h1 className="sHeading text-white">Omega 3D Printing</h1>
+										<ul className="">
+											<li>
+												<span className="pText mr-4 text-[#FF6600]">
+													Reduce
+												</span>
+												<span className="pText text-white">
+													Labour & Lead time
+												</span>
+											</li>
+											<li>
+												<span className="pText mr-4 text-[#FF6600]">
+													Reduce
+												</span>
+												<span className="pText text-white">Waste</span>
+											</li>
+											<li>
+												<span className="pText mr-4 text-[#FF6600]">
+													Improve
+												</span>
+												<span className="pText text-white">Efficiency</span>
+											</li>
+											<li>
+												<span className="pText mr-4 text-[#FF6600]">
+													Create
+												</span>
+												<span className="pText text-white">
+													Products from waste
+												</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+						{/* End Div 2 */}
+						{/* Start Div 3 */}
+						{/* <div className="" ref={slide3}>
+							<div className=" h-full max-w-[80vw] flex flex-col justify-center items-center gap-8">
+								<div>
+									<h2 className="text-[#FF6600] sHeading mb-8">
+										Machine Specifications
+									</h2>
+									<div className="flex flex-col md:flex-row gap-12">
+										<img
+											src="/img/home/machine1.png"
+											alt="bg"
+											className="flex-1 md:w-[40%] w-[100%]"
+										/>
+										<div className=" z-50 flex-1">
+											<div className="flex md:flex-row  gap-1  md:gap-8 flex-1 p-1 ">
+												<div className="flex-1 pText md:text-[#3f3f3f] text-white">
+													<h4 className="font-semibold mb-8">Axis Limits</h4>
+													<ul className="font-[12px]">
+														<li>X = 20m</li>
+														<li>Y = 5m</li>
+														<li>Z = 2.5m</li>
+														<li>A = +/- 120deg</li>
+														<li>C = +/- 365deg</li>
+													</ul>
 												</div>
-												<div className="flex-1 pl-4">
-													<h1 className="sHeading">Omega 3D Printing</h1>
-													<ul className="">
-														<li>
-															<span className="pText mr-4 text-[#FF6600]">
-																Reduce
-															</span>
-															<span className="pText">Labour & Lead time</span>
-														</li>
-														<li>
-															<span className="pText mr-4 text-[#FF6600]">
-																Reduce
-															</span>
-															<span className="pText">Waste</span>
-														</li>
-														<li>
-															<span className="pText mr-4 text-[#FF6600]">
-																Improve
-															</span>
-															<span className="pText">Efficiency</span>
-														</li>
-														<li>
-															<span className="pText mr-4 text-[#FF6600]">
-																Create
-															</span>
-															<span className="pText">Products from waste</span>
-														</li>
+												<div className="flex-1 pText md:text-[#3f3f3f] text-white">
+													<h4 className="font-semibold mb-8">Customization</h4>
+													<ul className="font-[12px]">
+														<li>2 x independent bridges</li>
+														<li>Op 1 - 2 x Mill Spindles</li>
+														<li>Op 2 - 1 x Mill & 1 x 3D printer head</li>
 													</ul>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
+
+								<img
+									src="/img/home/bg-spec.jpg"
+									alt="bg"
+									className="absolute top-0 left-0 h-full w-[100%]  md:w-[50%] object-cover z-[-5]"
+								/>
 							</div>
+						</div> */}
+						{/* End Div 3 */}
+					</div>
+				</section>
+
+				<section
+					id="calltoaction"
+					className="bg-red-500 w-full min-h-screen flex justify-center items-center"
+				>
+					<div>
+						<div className="mb-20">
+							<h2 className="superHeading mb-[-15px] md:mb-[-30px] lg:mb-[-50px] bgTextClip">
+								WE CAN.
+							</h2>
+							<h3 className="text-[#FF6600] lightHeading ">just imagine</h3>
 						</div>
 
-						{/* <div className="section section-lightblue  ">
-				<h2>Some section 1</h2>
-			</div>
-			<div className="section ">
-				<h2>Some section 2</h2>
-			</div> */}
+						<div className="flex gap-4 justify-center items-center">
+							<a href="mailto:info@o-megaverse.com">
+								<button className="bg-[#FF6600] hover:bg-blue-700 text-white text-sm py-2 px-3 md:px-4 rounded">
+									Get in touch
+								</button>
+							</a>
+							<a
+								href="https://form.asana.com/?k=XadmS3lTRA-KFCsdbp676w&d=1200250413180775"
+								target="_blank"
+								rel="noreferrer"
+							>
+								<button className="bg-[#FF6600] text-white text-sm py-2 px-3 md:px-4 rounded justify-center items-center">
+									Request an Quote
+								</button>
+							</a>
+						</div>
 					</div>
 				</section>
 			</div>
+			{/* <section className="partners py-11 relative">
+				<img src="./omegaverse_logo.svg" alt="" />
+			</section> */}
 		</>
 	);
 }

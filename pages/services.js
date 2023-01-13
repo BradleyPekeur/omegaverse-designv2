@@ -36,8 +36,8 @@ function Services(props) {
 				style={{ backgroundImage: "url(./img/services/services.png) " }}
 			>
 				<div className="max-w-[90vw] md:max-w-[80vw] flex flex-col md:flex-row">
-					<div className="min-h-screen flex flex-col md:flex-row justify-center items-center">
-						<div className="flex-1 w-full">
+					<div className="min-h-screen flex flex-col  md:flex-row justify-center items-center gap-8">
+						<div className="md:basis-2/4 w-full ">
 							<div className="flex-1 flex flex-col mb-16">
 								<h1 className="text-white heading">Services</h1>
 								<span className="text-[#FF6600] sHeading">
@@ -45,49 +45,47 @@ function Services(props) {
 								</span>
 							</div>
 						</div>
-						<div className="flex-1">
-							<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
-								<div className="bg-[#00000077] border border-[#FF6600] flex flex-col items-center justify-center p-5">
-									<ServicesCards
-										icon={
-											<TbBuildingBridge
-												size={50}
-												color="white"
-												className="mb-10"
-											/>
-										}
-										title="DFM & DFA"
-										description="Design for manufacturing & 3D printing."
-										textColor="#FF6600"
-										className="relative"
-									/>
-								</div>
+						<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  ">
+							<div className="bg-[#00000077] border border-[#FF6600] flex flex-col items-center justify-center p-1 min-w-[260px] w-full">
+								<ServicesCards
+									icon={
+										<TbBuildingBridge
+											size={50}
+											color="white"
+											className="mb-10"
+										/>
+									}
+									title="DFM & DFA"
+									description="Design for manufacturing & 3D printing."
+									textColor="#FF6600"
+									className="relative"
+								/>
+							</div>
 
-								<div className="bg-[#00000077] border border-[#FF6600] flex flex-col items-center justify-center p-5">
-									<ServicesCards
-										icon={
-											<GiCutDiamond size={50} color="white" className="mb-10" />
-										}
-										title="Mega CNC Milling"
-										description="3 axis to multi axis composites machining."
-										textColor="white"
-									/>
-								</div>
+							<div className="bg-[#00000077] border border-[#FF6600] flex flex-col items-center justify-center p-1 min-w-[260px] w-full">
+								<ServicesCards
+									icon={
+										<GiCutDiamond size={50} color="white" className="mb-10" />
+									}
+									title="Mega CNC Milling"
+									description="3 axis to multi axis composites machining."
+									textColor="white"
+								/>
+							</div>
 
-								<div className="bg-[#00000077] border border-[#FF6600] flex flex-col items-center justify-center p-5 ">
-									<ServicesCards
-										icon={
-											<SiBlockchaindotcom
-												size={50}
-												color="white"
-												className="mb-10"
-											/>
-										}
-										title="Mega 3D Printing"
-										description="Large scale 3D printing (Coming Soon)"
-										textColor="#FF6600"
-									/>
-								</div>
+							<div className="bg-[#00000077] border border-[#FF6600] flex flex-col items-center justify-center p-1 min-w-[260px] w-full">
+								<ServicesCards
+									icon={
+										<SiBlockchaindotcom
+											size={50}
+											color="white"
+											className="mb-10"
+										/>
+									}
+									title="Mega 3D Printing"
+									description="Large scale 3D printing (Coming Soon)"
+									textColor="#FF6600"
+								/>
 							</div>
 						</div>
 					</div>

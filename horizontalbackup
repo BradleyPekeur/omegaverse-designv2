@@ -1,0 +1,177 @@
+				<section className="relative">
+					<div className=" text-white min-h-[450vh]">
+						<div className="spacer"></div>
+
+						<div className="horizontal-sections">
+							<div className="pin-wrap">
+								<div className="animation-wrap to-right">
+									{/* ---------------------First Div */}
+									<div className="section bg-cover bg-no-repeat flex items-center justify-center">
+										<div className="flex flex-col md:flex-row max-w-[90vw] md:max-w-[80vw] gap-8 overflow-hidden">
+											<div className="flex-1">
+												<img src={contentImg} alt="Main Pic" />
+											</div>
+											<div className="flex-1">
+												<h2 className="sHeading text-[#FF6600] mb-8">
+													{contentTitle}
+												</h2>
+												<p className="text-white pText mb-8">{contentDesc}</p>
+												<div className="flex gap-4 ">
+													<button
+														className="border border-[#FF6600] hover:bg-blue-700 text-white font-bold py-2 px-1 md:px-4 rounded"
+														onClick={rapidClick}
+													>
+														Rapid Prototyping
+													</button>
+													<button
+														className="bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+														onClick={toolingClick}
+													>
+														Tooling
+													</button>
+													<button
+														className="bg-orange-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+														onClick={modelsClick}
+													>
+														Models and Props
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									{/* ---------------------End First Div */}
+									<div className="section section-amin section-gray">
+										<div>
+											<div className="mb-20">
+												<h2 className="superHeading mb-[-15px] md:mb-[-30px] lg:mb-[-50px]">
+													WE CAN.
+												</h2>
+												<h3 className="text-[#FF6600] lightHeading ">
+													just imagine
+												</h3>
+											</div>
+
+											<div className="flex gap-4 justify-center items-center">
+												<a href="mailto:info@o-megaverse.com">
+													<button className="bg-[#FF6600] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+														Get in touch
+													</button>
+												</a>
+												<a
+													href="https://form.asana.com/?k=XadmS3lTRA-KFCsdbp676w&d=1200250413180775"
+													target="_blank"
+													rel="noreferrer"
+												>
+													<button className="bg-[#FF6600] text-white py-2 px-4 rounded justify-center items-center">
+														Request an Quote
+													</button>
+												</a>
+											</div>
+										</div>
+
+										<div
+											className="block-anim yellow flex justify-center items-center "
+											// style={{backgroundImage:"url(./img/home/fworld.jpg) "}}
+										>
+											<div className="flex flex-col md:flex-row max-w-[90vw] md:max-w-[80vw] md:items-center gap-8">
+												<div className="w-full flex-1 bg-orange-500">
+													<img src="/img/home/Picture1.jpg" alt="Main Pic" />
+												</div>
+												<div className="flex-1 pl-4">
+													<h1 className="sHeading">Omega 3D Printing</h1>
+													<ul className="">
+														<li>
+															<span className="pText mr-4 text-[#FF6600]">
+																Reduce
+															</span>
+															<span className="pText">Labour & Lead time</span>
+														</li>
+														<li>
+															<span className="pText mr-4 text-[#FF6600]">
+																Reduce
+															</span>
+															<span className="pText">Waste</span>
+														</li>
+														<li>
+															<span className="pText mr-4 text-[#FF6600]">
+																Improve
+															</span>
+															<span className="pText">Efficiency</span>
+														</li>
+														<li>
+															<span className="pText mr-4 text-[#FF6600]">
+																Create
+															</span>
+															<span className="pText">Products from waste</span>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div className="section-lightblue min-h-screen min-w-screen  z-50 relative isolate flex justify-center items-center">
+							<div className=" h-full max-w-[80vw] flex flex-col justify-center items-center gap-8">
+								<div>
+									<h2 className="text-[#FF6600] sHeading mb-8">
+										Machine Specifications
+									</h2>
+									<div className="flex flex-col md:flex-row gap-12">
+										<img
+											src="/img/home/machine1.png"
+											alt="bg"
+											className="flex-1 md:w-[40%] w-[100%]"
+										/>
+										<div className=" z-50 flex-1">
+											<div className="flex md:flex-row  gap-1  md:gap-8 flex-1 p-1 ">
+												<div className="flex-1 pText md:text-[#3f3f3f] text-white">
+													<h4 className="font-semibold mb-8">Axis Limits</h4>
+													<ul className="font-[12px]">
+														<li>X = 20m</li>
+														<li>Y = 5m</li>
+														<li>Z = 2.5m</li>
+														<li>A = +/- 120deg</li>
+														<li>C = +/- 365deg</li>
+													</ul>
+												</div>
+												<div className="flex-1 pText md:text-[#3f3f3f] text-white">
+													<h4 className="font-semibold mb-8">Customization</h4>
+													<ul className="font-[12px]">
+														<li>2 x independent bridges</li>
+														<li>Op 1 - 2 x Mill Spindles</li>
+														<li>Op 2 - 1 x Mill & 1 x 3D printer head</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<img
+									src="/img/home/bg-spec.jpg"
+									alt="bg"
+									className="absolute top-0 left-0 h-full w-[100%]  md:w-[50%] object-cover z-[-5]"
+								/>
+							</div>
+						</div>
+
+						<div className="section text-[#FF6600] flex flex-col">
+							<h2>Our Partners</h2>
+							<div className="flex flex-col gap-8 justify-center items-center p-4">
+								<img
+									src="/img/home/phoenix.png"
+									alt="phoenix logo"
+									className="w-[400px] min-w-[300px]"
+								/>
+								<img
+									src="/img/home/duro.png"
+									alt="duro logo"
+									className="w-[400px] min-w-[300px]"
+								/>
+							</div>
+						</div>
+					</div>
+				</section>

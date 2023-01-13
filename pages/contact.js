@@ -97,13 +97,25 @@ function contact() {
 											</span>
 											<span className="leading-16">info@o-megaverse.com</span>
 										</div>
-										<div className="flex items-center mb-4">
+										<div
+											className="flex items-center
+										
+										"
+										>
 											<span>
 												<div className="w-6 mr-2">
 													<FiPhoneCall />
 												</div>
 											</span>
 											<span>+27 87 820 8800</span>
+										</div>
+										<div className="flex items-center mb-4">
+											<span>
+												<div className="w-6 mr-2">
+													<FiPhoneCall />
+												</div>
+											</span>
+											<span>+27 71 331 6345</span>
 										</div>
 										<div className="flex items-center">
 											<span>
